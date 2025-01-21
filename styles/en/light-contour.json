@@ -4416,7 +4416,211 @@
             ]
           ]
         ]
-      ]
+      ],
+      "layout": {"visibility": "visible"},
+      "paint": {
+        "line-color": "rgb(179, 134, 89)",
+        "line-opacity": {"stops": [[11, 0.2], [14, 0.4]]},
+        "line-width": {"stops": [[11, 0.4], [14, 0.6]]}
+      }
+    },
+    {
+      "id": "contour_index",
+      "type": "line",
+      "source": "contour",
+      "source-layer": "Elev_Contour",
+      "minzoom": 11,
+      "filter": [
+        "all",
+        [
+          "==",
+          [
+            "%",
+            [
+              "case",
+              ["has", "ContourEle"],
+              ["get", "ContourEle"],
+              ["get", "contourele"]
+            ],
+            40
+          ],
+          0
+        ],
+        [
+          "any",
+          [
+            "all",
+            ["<=", ["zoom"], 11],
+            [
+              "==",
+              [
+                "%",
+                [
+                  "case",
+                  ["has", "ContourEle"],
+                  ["get", "ContourEle"],
+                  ["get", "contourele"]
+                ],
+                800
+              ],
+              0
+            ]
+          ],
+          [
+            "all",
+            ["==", ["zoom"], 12],
+            [
+              "==",
+              [
+                "%",
+                [
+                  "case",
+                  ["has", "ContourEle"],
+                  ["get", "ContourEle"],
+                  ["get", "contourele"]
+                ],
+                400
+              ],
+              0
+            ]
+          ],
+          [
+            "all",
+            [">=", ["zoom"], 13],
+            [
+              "==",
+              [
+                "%",
+                [
+                  "case",
+                  ["has", "ContourEle"],
+                  ["get", "ContourEle"],
+                  ["get", "contourele"]
+                ],
+                200
+              ],
+              0
+            ]
+          ]
+        ]
+      ],
+      "layout": {"visibility": "visible"},
+      "paint": {
+        "line-color": "rgb(166, 116, 66)",
+        "line-opacity": {"stops": [[11, 0.2], [14, 0.4]]},
+        "line-width": 1.1
+      }
+    },
+    {
+      "id": "contour_label",
+      "type": "symbol",
+      "metadata": {},
+      "source": "contour",
+      "source-layer": "Elev_Contour",
+      "minzoom": 11,
+      "filter": [
+        "all",
+        [
+          "==",
+          [
+            "%",
+            [
+              "case",
+              ["has", "ContourEle"],
+              ["get", "ContourEle"],
+              ["get", "contourele"]
+            ],
+            40
+          ],
+          0
+        ],
+        [
+          "any",
+          [
+            "all",
+            ["<=", ["zoom"], 11],
+            [
+              "==",
+              [
+                "%",
+                [
+                  "case",
+                  ["has", "ContourEle"],
+                  ["get", "ContourEle"],
+                  ["get", "contourele"]
+                ],
+                800
+              ],
+              0
+            ]
+          ],
+          [
+            "all",
+            ["==", ["zoom"], 12],
+            [
+              "==",
+              [
+                "%",
+                [
+                  "case",
+                  ["has", "ContourEle"],
+                  ["get", "ContourEle"],
+                  ["get", "contourele"]
+                ],
+                400
+              ],
+              0
+            ]
+          ],
+          [
+            "all",
+            [">=", ["zoom"], 13],
+            [
+              "==",
+              [
+                "%",
+                [
+                  "case",
+                  ["has", "ContourEle"],
+                  ["get", "ContourEle"],
+                  ["get", "contourele"]
+                ],
+                200
+              ],
+              0
+            ]
+          ]
+        ]
+      ],
+      "layout": {
+        "text-size": {"base": 1, "stops": [[15, 9.5], [20, 12]]},
+        "text-allow-overlap": false,
+        "symbol-avoid-edges": true,
+        "text-ignore-placement": false,
+        "symbol-placement": "line",
+        "text-padding": 10,
+        "text-rotation-alignment": "map",
+        "text-field": [
+          "concat",
+          [
+            "to-string",
+            [
+              "case",
+              ["has", "ContourEle"],
+              ["get", "ContourEle"],
+              ["get", "contourele"]
+            ]
+          ],
+          "ft"
+        ],
+        "text-font": ["literal", ["Noto Sans Regular"]],
+        "visibility": "visible"
+      },
+      "paint": {
+        "text-color": "rgb(131, 66, 37)",
+        "text-halo-color": "hsla(0, 0%, 100%, 0.5)",
+        "text-halo-width": 1.5
+      }
     }
   ],
   "id": "wdcghsw"
