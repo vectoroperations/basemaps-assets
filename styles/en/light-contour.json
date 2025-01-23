@@ -4,7 +4,7 @@
   "sources": {
     "contour": {
       "type": "vector",
-      "tiless": ["https://map.runvector.app/contour/{z}/{x}/{y}.mvt"],
+      "tiles": ["https://map.runvector.app/contour/{z}/{x}/{y}.mvt"],
       "minzoom": 11,
       "maxzoom": 11,
       "scheme": "xyz"
