@@ -3718,7 +3718,12 @@
         "text-justify": "auto",
         "text-anchor": ["step", ["zoom"], "left", 8, "center"],
         "text-radial-offset": 0.4,
-        "text-transform": "uppercase"
+        "text-transform": [
+          "case",
+          ["<", ["get", "population_rank"], 9],
+          "none",
+          "uppercase"
+        ]
       },
       "paint": {
         "text-color": "#9a9a9a",
