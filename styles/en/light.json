@@ -1,7 +1,7 @@
 {
   "version": 8,
   "name": "style@4.3.0 theme@light lang@en",
-  "metadata": {},
+  "metadata": {"maputnik:renderer": "mlgljs"},
   "sources": {
     "protomaps": {
       "attribution": "<a href=\"https://github.com/protomaps/basemaps\">Protomaps</a> © <a href=\"https://openstreetmap.org\">OpenStreetMap</a>",
@@ -24,7 +24,7 @@
       "source": "protomaps",
       "source-layer": "earth",
       "filter": ["==", ["geometry-type"], "Polygon"],
-      "paint": {"fill-color": "rgba(213, 213, 206, 1)"}
+      "paint": {"fill-color": "#F8F8F4"}
     },
     {
       "id": "landcover",
@@ -99,7 +99,7 @@
               ]
             ]
           ],
-          "#9cd3b4",
+          "#B3DF8D",
           [
             "in",
             ["get", "kind"],
@@ -235,7 +235,7 @@
       "source": "protomaps",
       "source-layer": "water",
       "filter": ["==", ["geometry-type"], "Polygon"],
-      "paint": {"fill-color": "#80deea"}
+      "paint": {"fill-color": "#8AD5F4"}
     },
     {
       "id": "water_stream",
@@ -668,7 +668,7 @@
       "minzoom": 13,
       "filter": ["has", "is_link"],
       "paint": {
-        "line-color": "#e0e0e0",
+        "line-color": "#919494",
         "line-gap-width": [
           "interpolate",
           ["exponential", 1.6],
@@ -743,7 +743,7 @@
         ["!has", "is_link"]
       ],
       "paint": {
-        "line-color": "#e0e0e0",
+        "line-color": "#919494",
         "line-gap-width": [
           "interpolate",
           ["exponential", 1.6],
@@ -801,7 +801,7 @@
       "source-layer": "roads",
       "filter": ["has", "is_link"],
       "paint": {
-        "line-color": "#ffffff",
+        "line-color": "#ACB3B3",
         "line-width": [
           "interpolate",
           ["exponential", 1.6],
@@ -858,9 +858,9 @@
           ["exponential", 1.6],
           ["zoom"],
           11,
-          "#ebebeb",
+          "#E3E8E8",
           16,
-          "#ffffff"
+          "#E3E8E8"
         ],
         "line-width": [
           "interpolate",
@@ -925,7 +925,7 @@
         ["==", "kind", "major_road"]
       ],
       "paint": {
-        "line-color": "#fafafa",
+        "line-color": "#CFD4D4",
         "line-width": [
           "interpolate",
           ["exponential", 1.6],
@@ -991,7 +991,7 @@
         ["!has", "is_link"]
       ],
       "paint": {
-        "line-color": "#ffffff",
+        "line-color": "#ACB3B3",
         "line-width": [
           "interpolate",
           ["exponential", 1.6],
@@ -999,9 +999,9 @@
           3,
           0,
           6,
-          1.1,
+          2,
           12,
-          1.6,
+          4,
           15,
           5,
           18,
@@ -1084,7 +1084,7 @@
       "minzoom": 12,
       "filter": ["all", ["has", "is_bridge"], ["has", "is_link"]],
       "paint": {
-        "line-color": "#e0e0e0",
+        "line-color": "#919494",
         "line-gap-width": [
           "interpolate",
           ["exponential", 1.6],
@@ -1224,7 +1224,7 @@
       "minzoom": 12,
       "filter": ["all", ["has", "is_bridge"], ["has", "is_link"]],
       "paint": {
-        "line-color": "#ffffff",
+        "line-color": "#ACB3B3",
         "line-width": [
           "interpolate",
           ["exponential", 1.6],
@@ -1275,7 +1275,7 @@
         ["!has", "is_link"]
       ],
       "paint": {
-        "line-color": "#e0e0e0",
+        "line-color": "#919494",
         "line-gap-width": [
           "interpolate",
           ["exponential", 1.6],
@@ -1312,7 +1312,7 @@
         ["!has", "is_link"]
       ],
       "paint": {
-        "line-color": "#ffffff",
+        "line-color": "#ACB3B3",
         "line-width": [
           "interpolate",
           ["exponential", 1.6],
@@ -1737,7 +1737,12 @@
         "text-justify": "auto",
         "text-anchor": ["step", ["zoom"], "left", 8, "center"],
         "text-radial-offset": 0.4,
-        "text-transform": "uppercase"
+        "text-transform": [
+          "case",
+          ["<", ["get", "population_rank"], 9],
+          "none",
+          "uppercase"
+        ]
       },
       "paint": {
         "text-color": "#5c5c5c",
