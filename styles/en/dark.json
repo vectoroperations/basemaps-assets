@@ -11,7 +11,6 @@
     }
   },
   "sprite": "https://map-assets.runvector.app/sprites/v4/dark",
-  "glyphs": "https://map-assets.runvector.app/fonts/{fontstack}/{range}.pbf",
   "layers": [
     {
       "id": "background",
