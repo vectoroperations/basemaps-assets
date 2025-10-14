@@ -1,0 +1,198 @@
+{
+  "aerodrome": {
+    "height": 76,
+    "pixelRatio": 2,
+    "width": 76,
+    "x": 0,
+    "y": 0
+  },
+  "animal": {
+    "height": 76,
+    "pixelRatio": 2,
+    "width": 76,
+    "x": 76,
+    "y": 0
+  },
+  "beach": {
+    "height": 76,
+    "pixelRatio": 2,
+    "width": 76,
+    "x": 152,
+    "y": 0
+  },
+  "bench": {
+    "height": 76,
+    "pixelRatio": 2,
+    "width": 76,
+    "x": 228,
+    "y": 0
+  },
+  "bus_stop": {
+    "height": 76,
+    "pixelRatio": 2,
+    "width": 76,
+    "x": 304,
+    "y": 0
+  },
+  "drinking_water": {
+    "height": 76,
+    "pixelRatio": 2,
+    "width": 76,
+    "x": 380,
+    "y": 0
+  },
+  "ferry_terminal": {
+    "height": 76,
+    "pixelRatio": 2,
+    "width": 76,
+    "x": 0,
+    "y": 76
+  },
+  "forest": {
+    "height": 76,
+    "pixelRatio": 2,
+    "width": 76,
+    "x": 0,
+    "y": 152
+  },
+  "garden": {
+    "height": 76,
+    "pixelRatio": 2,
+    "width": 76,
+    "x": 0,
+    "y": 228
+  },
+  "library": {
+    "height": 76,
+    "pixelRatio": 2,
+    "width": 76,
+    "x": 0,
+    "y": 304
+  },
+  "marina": {
+    "height": 76,
+    "pixelRatio": 2,
+    "width": 76,
+    "x": 0,
+    "y": 380
+  },
+  "park": {
+    "height": 76,
+    "pixelRatio": 2,
+    "width": 76,
+    "x": 76,
+    "y": 76
+  },
+  "peak": {
+    "height": 76,
+    "pixelRatio": 2,
+    "width": 76,
+    "x": 152,
+    "y": 76
+  },
+  "school": {
+    "height": 76,
+    "pixelRatio": 2,
+    "width": 76,
+    "x": 228,
+    "y": 76
+  },
+  "shield_badge_2": {
+    "height": 40,
+    "pixelRatio": 2,
+    "width": 40,
+    "x": 76,
+    "y": 380
+  },
+  "shield_badge_3": {
+    "height": 40,
+    "pixelRatio": 2,
+    "width": 50,
+    "x": 456,
+    "y": 76
+  },
+  "shield_badge_crossbar_2": {
+    "height": 40,
+    "pixelRatio": 2,
+    "width": 40,
+    "x": 100,
+    "y": 420
+  },
+  "shield_badge_crossbar_3": {
+    "height": 40,
+    "pixelRatio": 2,
+    "width": 50,
+    "x": 456,
+    "y": 116
+  },
+  "shield_us_interstate_2": {
+    "height": 40,
+    "pixelRatio": 2,
+    "width": 40,
+    "x": 116,
+    "y": 380
+  },
+  "shield_us_interstate_3": {
+    "height": 40,
+    "pixelRatio": 2,
+    "width": 50,
+    "x": 0,
+    "y": 456
+  },
+  "shield_us_interstate_business_2": {
+    "height": 40,
+    "pixelRatio": 2,
+    "width": 40,
+    "x": 100,
+    "y": 460
+  },
+  "shield_us_interstate_business_3": {
+    "height": 40,
+    "pixelRatio": 2,
+    "width": 50,
+    "x": 50,
+    "y": 456
+  },
+  "stadium": {
+    "height": 76,
+    "pixelRatio": 2,
+    "width": 76,
+    "x": 304,
+    "y": 76
+  },
+  "toilets": {
+    "height": 76,
+    "pixelRatio": 2,
+    "width": 76,
+    "x": 380,
+    "y": 76
+  },
+  "townspot": {
+    "height": 76,
+    "pixelRatio": 2,
+    "width": 40,
+    "x": 456,
+    "y": 0
+  },
+  "train_station": {
+    "height": 76,
+    "pixelRatio": 2,
+    "width": 76,
+    "x": 76,
+    "y": 152
+  },
+  "university": {
+    "height": 76,
+    "pixelRatio": 2,
+    "width": 76,
+    "x": 76,
+    "y": 228
+  },
+  "zoo": {
+    "height": 76,
+    "pixelRatio": 2,
+    "width": 76,
+    "x": 76,
+    "y": 304
+  }
+}
