@@ -1339,7 +1339,7 @@
       "filter": ["in", "kind", "river", "stream"],
       "layout": {
         "symbol-placement": "line",
-        "text-font": ["SF Pro Display Regular Italic"],
+        "text-font": ["Inter Display Italic"],
         "text-field": [
           "case",
           [
@@ -1380,7 +1380,7 @@
                     "case",
                     ["==", ["get", "script"], "Devanagari"],
                     ["literal", ["Noto Sans Devanagari Regular v1"]],
-                    ["literal", ["SF Pro Display Regular"]]
+                    ["literal", ["Inter Display Regular"]]
                   ]
                 }
               ],
@@ -1418,7 +1418,7 @@
                   "case",
                   ["==", ["get", "script"], "Devanagari"],
                   ["literal", ["Noto Sans Devanagari Regular v1"]],
-                  ["literal", ["SF Pro Display Regular"]]
+                  ["literal", ["Inter Display Regular"]]
                 ]
               },
               "\n",
@@ -1429,7 +1429,7 @@
                   "case",
                   ["==", ["get", "script2"], "Devanagari"],
                   ["literal", ["Noto Sans Devanagari Regular v1"]],
-                  ["literal", ["SF Pro Display Regular"]]
+                  ["literal", ["Inter Display Regular"]]
                 ]
               }
             ],
@@ -1453,7 +1453,7 @@
                     "case",
                     ["==", ["get", "script2"], "Devanagari"],
                     ["literal", ["Noto Sans Devanagari Regular v1"]],
-                    ["literal", ["SF Pro Display Regular"]]
+                    ["literal", ["Inter Display Regular"]]
                   ]
                 }
               ],
@@ -1474,7 +1474,7 @@
                     "case",
                     ["==", ["get", "script"], "Devanagari"],
                     ["literal", ["Noto Sans Devanagari Regular v1"]],
-                    ["literal", ["SF Pro Display Regular"]]
+                    ["literal", ["Inter Display Regular"]]
                   ]
                 }
               ]
@@ -1495,7 +1495,7 @@
                   "case",
                   ["==", ["get", "script"], "Devanagari"],
                   ["literal", ["Noto Sans Devanagari Regular v1"]],
-                  ["literal", ["SF Pro Display Regular"]]
+                  ["literal", ["Inter Display Regular"]]
                 ]
               },
               "\n",
@@ -1506,7 +1506,7 @@
                   "case",
                   ["==", ["get", "script2"], "Devanagari"],
                   ["literal", ["Noto Sans Devanagari Regular v1"]],
-                  ["literal", ["SF Pro Display Regular"]]
+                  ["literal", ["Inter Display Regular"]]
                 ]
               },
               "\n",
@@ -1517,7 +1517,7 @@
                   "case",
                   ["==", ["get", "script3"], "Devanagari"],
                   ["literal", ["Noto Sans Devanagari Regular v1"]],
-                  ["literal", ["SF Pro Display Regular"]]
+                  ["literal", ["Inter Display Regular"]]
                 ]
               }
             ],
@@ -1541,7 +1541,7 @@
                     "case",
                     ["==", ["get", "script2"], "Devanagari"],
                     ["literal", ["Noto Sans Devanagari Regular v1"]],
-                    ["literal", ["SF Pro Display Regular"]]
+                    ["literal", ["Inter Display Regular"]]
                   ]
                 },
                 "\n",
@@ -1552,7 +1552,7 @@
                     "case",
                     ["==", ["get", "script3"], "Devanagari"],
                     ["literal", ["Noto Sans Devanagari Regular v1"]],
-                    ["literal", ["SF Pro Display Regular"]]
+                    ["literal", ["Inter Display Regular"]]
                   ]
                 }
               ],
@@ -1574,7 +1574,7 @@
                     "case",
                     ["==", ["get", "script"], "Devanagari"],
                     ["literal", ["Noto Sans Devanagari Regular v1"]],
-                    ["literal", ["SF Pro Display Regular"]]
+                    ["literal", ["Inter Display Regular"]]
                   ]
                 },
                 "\n",
@@ -1585,7 +1585,7 @@
                     "case",
                     ["==", ["get", "script3"], "Devanagari"],
                     ["literal", ["Noto Sans Devanagari Regular v1"]],
-                    ["literal", ["SF Pro Display Regular"]]
+                    ["literal", ["Inter Display Regular"]]
                   ]
                 }
               ],
@@ -1606,7 +1606,7 @@
                     "case",
                     ["==", ["get", "script"], "Devanagari"],
                     ["literal", ["Noto Sans Devanagari Regular v1"]],
-                    ["literal", ["SF Pro Display Regular"]]
+                    ["literal", ["Inter Display Regular"]]
                   ]
                 },
                 "\n",
@@ -1617,7 +1617,7 @@
                     "case",
                     ["==", ["get", "script2"], "Devanagari"],
                     ["literal", ["Noto Sans Devanagari Regular v1"]],
-                    ["literal", ["SF Pro Display Regular"]]
+                    ["literal", ["Inter Display Regular"]]
                   ]
                 }
               ]
@@ -1639,7 +1639,7 @@
       "layout": {
         "symbol-sort-key": ["get", "min_zoom"],
         "symbol-placement": "line",
-        "text-font": ["SF Pro Display Regular"],
+        "text-font": ["Inter Display Regular"],
         "text-field": [
           "case",
           [
@@ -1680,7 +1680,7 @@
                     "case",
                     ["==", ["get", "script"], "Devanagari"],
                     ["literal", ["Noto Sans Devanagari Regular v1"]],
-                    ["literal", ["SF Pro Display Regular"]]
+                    ["literal", ["Inter Display Regular"]]
                   ]
                 }
               ],
@@ -1718,7 +1718,7 @@
                   "case",
                   ["==", ["get", "script"], "Devanagari"],
                   ["literal", ["Noto Sans Devanagari Regular v1"]],
-                  ["literal", ["SF Pro Display Regular"]]
+                  ["literal", ["Inter Display Regular"]]
                 ]
               },
               "\n",
@@ -1729,7 +1729,7 @@
                   "case",
                   ["==", ["get", "script2"], "Devanagari"],
                   ["literal", ["Noto Sans Devanagari Regular v1"]],
-                  ["literal", ["SF Pro Display Regular"]]
+                  ["literal", ["Inter Display Regular"]]
                 ]
               }
             ],
@@ -1753,7 +1753,7 @@
                     "case",
                     ["==", ["get", "script2"], "Devanagari"],
                     ["literal", ["Noto Sans Devanagari Regular v1"]],
-                    ["literal", ["SF Pro Display Regular"]]
+                    ["literal", ["Inter Display Regular"]]
                   ]
                 }
               ],
@@ -1774,7 +1774,7 @@
                     "case",
                     ["==", ["get", "script"], "Devanagari"],
                     ["literal", ["Noto Sans Devanagari Regular v1"]],
-                    ["literal", ["SF Pro Display Regular"]]
+                    ["literal", ["Inter Display Regular"]]
                   ]
                 }
               ]
@@ -1795,7 +1795,7 @@
                   "case",
                   ["==", ["get", "script"], "Devanagari"],
                   ["literal", ["Noto Sans Devanagari Regular v1"]],
-                  ["literal", ["SF Pro Display Regular"]]
+                  ["literal", ["Inter Display Regular"]]
                 ]
               },
               "\n",
@@ -1806,7 +1806,7 @@
                   "case",
                   ["==", ["get", "script2"], "Devanagari"],
                   ["literal", ["Noto Sans Devanagari Regular v1"]],
-                  ["literal", ["SF Pro Display Regular"]]
+                  ["literal", ["Inter Display Regular"]]
                 ]
               },
               "\n",
@@ -1817,7 +1817,7 @@
                   "case",
                   ["==", ["get", "script3"], "Devanagari"],
                   ["literal", ["Noto Sans Devanagari Regular v1"]],
-                  ["literal", ["SF Pro Display Regular"]]
+                  ["literal", ["Inter Display Regular"]]
                 ]
               }
             ],
@@ -1841,7 +1841,7 @@
                     "case",
                     ["==", ["get", "script2"], "Devanagari"],
                     ["literal", ["Noto Sans Devanagari Regular v1"]],
-                    ["literal", ["SF Pro Display Regular"]]
+                    ["literal", ["Inter Display Regular"]]
                   ]
                 },
                 "\n",
@@ -1852,7 +1852,7 @@
                     "case",
                     ["==", ["get", "script3"], "Devanagari"],
                     ["literal", ["Noto Sans Devanagari Regular v1"]],
-                    ["literal", ["SF Pro Display Regular"]]
+                    ["literal", ["Inter Display Regular"]]
                   ]
                 }
               ],
@@ -1874,7 +1874,7 @@
                     "case",
                     ["==", ["get", "script"], "Devanagari"],
                     ["literal", ["Noto Sans Devanagari Regular v1"]],
-                    ["literal", ["SF Pro Display Regular"]]
+                    ["literal", ["Inter Display Regular"]]
                   ]
                 },
                 "\n",
@@ -1885,7 +1885,7 @@
                     "case",
                     ["==", ["get", "script3"], "Devanagari"],
                     ["literal", ["Noto Sans Devanagari Regular v1"]],
-                    ["literal", ["SF Pro Display Regular"]]
+                    ["literal", ["Inter Display Regular"]]
                   ]
                 }
               ],
@@ -1906,7 +1906,7 @@
                     "case",
                     ["==", ["get", "script"], "Devanagari"],
                     ["literal", ["Noto Sans Devanagari Regular v1"]],
-                    ["literal", ["SF Pro Display Regular"]]
+                    ["literal", ["Inter Display Regular"]]
                   ]
                 },
                 "\n",
@@ -1917,7 +1917,7 @@
                     "case",
                     ["==", ["get", "script2"], "Devanagari"],
                     ["literal", ["Noto Sans Devanagari Regular v1"]],
-                    ["literal", ["SF Pro Display Regular"]]
+                    ["literal", ["Inter Display Regular"]]
                   ]
                 }
               ]
@@ -1943,7 +1943,7 @@
       "layout": {
         "symbol-sort-key": ["get", "min_zoom"],
         "symbol-placement": "line",
-        "text-font": ["SF Pro Display Regular"],
+        "text-font": ["Inter Display Regular"],
         "text-field": [
           "step",
           ["zoom"],
@@ -2025,7 +2025,7 @@
         "fjord"
       ],
       "layout": {
-        "text-font": ["SF Pro Display Regular Italic"],
+        "text-font": ["Inter Display Italic"],
         "text-field": [
           "case",
           [
@@ -2066,7 +2066,7 @@
                     "case",
                     ["==", ["get", "script"], "Devanagari"],
                     ["literal", ["Noto Sans Devanagari Regular v1"]],
-                    ["literal", ["SF Pro Display Regular"]]
+                    ["literal", ["Inter Display Regular"]]
                   ]
                 }
               ],
@@ -2104,7 +2104,7 @@
                   "case",
                   ["==", ["get", "script"], "Devanagari"],
                   ["literal", ["Noto Sans Devanagari Regular v1"]],
-                  ["literal", ["SF Pro Display Regular"]]
+                  ["literal", ["Inter Display Regular"]]
                 ]
               },
               "\n",
@@ -2115,7 +2115,7 @@
                   "case",
                   ["==", ["get", "script2"], "Devanagari"],
                   ["literal", ["Noto Sans Devanagari Regular v1"]],
-                  ["literal", ["SF Pro Display Regular"]]
+                  ["literal", ["Inter Display Regular"]]
                 ]
               }
             ],
@@ -2139,7 +2139,7 @@
                     "case",
                     ["==", ["get", "script2"], "Devanagari"],
                     ["literal", ["Noto Sans Devanagari Regular v1"]],
-                    ["literal", ["SF Pro Display Regular"]]
+                    ["literal", ["Inter Display Regular"]]
                   ]
                 }
               ],
@@ -2160,7 +2160,7 @@
                     "case",
                     ["==", ["get", "script"], "Devanagari"],
                     ["literal", ["Noto Sans Devanagari Regular v1"]],
-                    ["literal", ["SF Pro Display Regular"]]
+                    ["literal", ["Inter Display Regular"]]
                   ]
                 }
               ]
@@ -2181,7 +2181,7 @@
                   "case",
                   ["==", ["get", "script"], "Devanagari"],
                   ["literal", ["Noto Sans Devanagari Regular v1"]],
-                  ["literal", ["SF Pro Display Regular"]]
+                  ["literal", ["Inter Display Regular"]]
                 ]
               },
               "\n",
@@ -2192,7 +2192,7 @@
                   "case",
                   ["==", ["get", "script2"], "Devanagari"],
                   ["literal", ["Noto Sans Devanagari Regular v1"]],
-                  ["literal", ["SF Pro Display Regular"]]
+                  ["literal", ["Inter Display Regular"]]
                 ]
               },
               "\n",
@@ -2203,7 +2203,7 @@
                   "case",
                   ["==", ["get", "script3"], "Devanagari"],
                   ["literal", ["Noto Sans Devanagari Regular v1"]],
-                  ["literal", ["SF Pro Display Regular"]]
+                  ["literal", ["Inter Display Regular"]]
                 ]
               }
             ],
@@ -2227,7 +2227,7 @@
                     "case",
                     ["==", ["get", "script2"], "Devanagari"],
                     ["literal", ["Noto Sans Devanagari Regular v1"]],
-                    ["literal", ["SF Pro Display Regular"]]
+                    ["literal", ["Inter Display Regular"]]
                   ]
                 },
                 "\n",
@@ -2238,7 +2238,7 @@
                     "case",
                     ["==", ["get", "script3"], "Devanagari"],
                     ["literal", ["Noto Sans Devanagari Regular v1"]],
-                    ["literal", ["SF Pro Display Regular"]]
+                    ["literal", ["Inter Display Regular"]]
                   ]
                 }
               ],
@@ -2260,7 +2260,7 @@
                     "case",
                     ["==", ["get", "script"], "Devanagari"],
                     ["literal", ["Noto Sans Devanagari Regular v1"]],
-                    ["literal", ["SF Pro Display Regular"]]
+                    ["literal", ["Inter Display Regular"]]
                   ]
                 },
                 "\n",
@@ -2271,7 +2271,7 @@
                     "case",
                     ["==", ["get", "script3"], "Devanagari"],
                     ["literal", ["Noto Sans Devanagari Regular v1"]],
-                    ["literal", ["SF Pro Display Regular"]]
+                    ["literal", ["Inter Display Regular"]]
                   ]
                 }
               ],
@@ -2292,7 +2292,7 @@
                     "case",
                     ["==", ["get", "script"], "Devanagari"],
                     ["literal", ["Noto Sans Devanagari Regular v1"]],
-                    ["literal", ["SF Pro Display Regular"]]
+                    ["literal", ["Inter Display Regular"]]
                   ]
                 },
                 "\n",
@@ -2303,7 +2303,7 @@
                     "case",
                     ["==", ["get", "script2"], "Devanagari"],
                     ["literal", ["Noto Sans Devanagari Regular v1"]],
-                    ["literal", ["SF Pro Display Regular"]]
+                    ["literal", ["Inter Display Regular"]]
                   ]
                 }
               ]
@@ -2324,7 +2324,7 @@
       "source-layer": "water",
       "filter": ["in", "kind", "lake", "water"],
       "layout": {
-        "text-font": ["SF Pro Display Regular Italic"],
+        "text-font": ["Inter Display Italic"],
         "text-field": [
           "case",
           [
@@ -2365,7 +2365,7 @@
                     "case",
                     ["==", ["get", "script"], "Devanagari"],
                     ["literal", ["Noto Sans Devanagari Regular v1"]],
-                    ["literal", ["SF Pro Display Regular"]]
+                    ["literal", ["Inter Display Regular"]]
                   ]
                 }
               ],
@@ -2403,7 +2403,7 @@
                   "case",
                   ["==", ["get", "script"], "Devanagari"],
                   ["literal", ["Noto Sans Devanagari Regular v1"]],
-                  ["literal", ["SF Pro Display Regular"]]
+                  ["literal", ["Inter Display Regular"]]
                 ]
               },
               "\n",
@@ -2414,7 +2414,7 @@
                   "case",
                   ["==", ["get", "script2"], "Devanagari"],
                   ["literal", ["Noto Sans Devanagari Regular v1"]],
-                  ["literal", ["SF Pro Display Regular"]]
+                  ["literal", ["Inter Display Regular"]]
                 ]
               }
             ],
@@ -2438,7 +2438,7 @@
                     "case",
                     ["==", ["get", "script2"], "Devanagari"],
                     ["literal", ["Noto Sans Devanagari Regular v1"]],
-                    ["literal", ["SF Pro Display Regular"]]
+                    ["literal", ["Inter Display Regular"]]
                   ]
                 }
               ],
@@ -2459,7 +2459,7 @@
                     "case",
                     ["==", ["get", "script"], "Devanagari"],
                     ["literal", ["Noto Sans Devanagari Regular v1"]],
-                    ["literal", ["SF Pro Display Regular"]]
+                    ["literal", ["Inter Display Regular"]]
                   ]
                 }
               ]
@@ -2480,7 +2480,7 @@
                   "case",
                   ["==", ["get", "script"], "Devanagari"],
                   ["literal", ["Noto Sans Devanagari Regular v1"]],
-                  ["literal", ["SF Pro Display Regular"]]
+                  ["literal", ["Inter Display Regular"]]
                 ]
               },
               "\n",
@@ -2491,7 +2491,7 @@
                   "case",
                   ["==", ["get", "script2"], "Devanagari"],
                   ["literal", ["Noto Sans Devanagari Regular v1"]],
-                  ["literal", ["SF Pro Display Regular"]]
+                  ["literal", ["Inter Display Regular"]]
                 ]
               },
               "\n",
@@ -2502,7 +2502,7 @@
                   "case",
                   ["==", ["get", "script3"], "Devanagari"],
                   ["literal", ["Noto Sans Devanagari Regular v1"]],
-                  ["literal", ["SF Pro Display Regular"]]
+                  ["literal", ["Inter Display Regular"]]
                 ]
               }
             ],
@@ -2526,7 +2526,7 @@
                     "case",
                     ["==", ["get", "script2"], "Devanagari"],
                     ["literal", ["Noto Sans Devanagari Regular v1"]],
-                    ["literal", ["SF Pro Display Regular"]]
+                    ["literal", ["Inter Display Regular"]]
                   ]
                 },
                 "\n",
@@ -2537,7 +2537,7 @@
                     "case",
                     ["==", ["get", "script3"], "Devanagari"],
                     ["literal", ["Noto Sans Devanagari Regular v1"]],
-                    ["literal", ["SF Pro Display Regular"]]
+                    ["literal", ["Inter Display Regular"]]
                   ]
                 }
               ],
@@ -2559,7 +2559,7 @@
                     "case",
                     ["==", ["get", "script"], "Devanagari"],
                     ["literal", ["Noto Sans Devanagari Regular v1"]],
-                    ["literal", ["SF Pro Display Regular"]]
+                    ["literal", ["Inter Display Regular"]]
                   ]
                 },
                 "\n",
@@ -2570,7 +2570,7 @@
                     "case",
                     ["==", ["get", "script3"], "Devanagari"],
                     ["literal", ["Noto Sans Devanagari Regular v1"]],
-                    ["literal", ["SF Pro Display Regular"]]
+                    ["literal", ["Inter Display Regular"]]
                   ]
                 }
               ],
@@ -2591,7 +2591,7 @@
                     "case",
                     ["==", ["get", "script"], "Devanagari"],
                     ["literal", ["Noto Sans Devanagari Regular v1"]],
-                    ["literal", ["SF Pro Display Regular"]]
+                    ["literal", ["Inter Display Regular"]]
                   ]
                 },
                 "\n",
@@ -2602,7 +2602,7 @@
                     "case",
                     ["==", ["get", "script2"], "Devanagari"],
                     ["literal", ["Noto Sans Devanagari Regular v1"]],
-                    ["literal", ["SF Pro Display Regular"]]
+                    ["literal", ["Inter Display Regular"]]
                   ]
                 }
               ]
@@ -2660,7 +2660,7 @@
           "train_station",
           ["get", "kind"]
         ],
-        "text-font": ["SF Pro Display Semibold"],
+        "text-font": ["Inter Display SemiBold"],
         "text-justify": "auto",
         "text-field": [
           "case",
@@ -2702,7 +2702,7 @@
                     "case",
                     ["==", ["get", "script"], "Devanagari"],
                     ["literal", ["Noto Sans Devanagari Regular v1"]],
-                    ["literal", ["SF Pro Display Regular"]]
+                    ["literal", ["Inter Display Regular"]]
                   ]
                 }
               ],
@@ -2740,7 +2740,7 @@
                   "case",
                   ["==", ["get", "script"], "Devanagari"],
                   ["literal", ["Noto Sans Devanagari Regular v1"]],
-                  ["literal", ["SF Pro Display Regular"]]
+                  ["literal", ["Inter Display Regular"]]
                 ]
               },
               "\n",
@@ -2751,7 +2751,7 @@
                   "case",
                   ["==", ["get", "script2"], "Devanagari"],
                   ["literal", ["Noto Sans Devanagari Regular v1"]],
-                  ["literal", ["SF Pro Display Regular"]]
+                  ["literal", ["Inter Display Regular"]]
                 ]
               }
             ],
@@ -2775,7 +2775,7 @@
                     "case",
                     ["==", ["get", "script2"], "Devanagari"],
                     ["literal", ["Noto Sans Devanagari Regular v1"]],
-                    ["literal", ["SF Pro Display Regular"]]
+                    ["literal", ["Inter Display Regular"]]
                   ]
                 }
               ],
@@ -2796,7 +2796,7 @@
                     "case",
                     ["==", ["get", "script"], "Devanagari"],
                     ["literal", ["Noto Sans Devanagari Regular v1"]],
-                    ["literal", ["SF Pro Display Regular"]]
+                    ["literal", ["Inter Display Regular"]]
                   ]
                 }
               ]
@@ -2817,7 +2817,7 @@
                   "case",
                   ["==", ["get", "script"], "Devanagari"],
                   ["literal", ["Noto Sans Devanagari Regular v1"]],
-                  ["literal", ["SF Pro Display Regular"]]
+                  ["literal", ["Inter Display Regular"]]
                 ]
               },
               "\n",
@@ -2828,7 +2828,7 @@
                   "case",
                   ["==", ["get", "script2"], "Devanagari"],
                   ["literal", ["Noto Sans Devanagari Regular v1"]],
-                  ["literal", ["SF Pro Display Regular"]]
+                  ["literal", ["Inter Display Regular"]]
                 ]
               },
               "\n",
@@ -2839,7 +2839,7 @@
                   "case",
                   ["==", ["get", "script3"], "Devanagari"],
                   ["literal", ["Noto Sans Devanagari Regular v1"]],
-                  ["literal", ["SF Pro Display Regular"]]
+                  ["literal", ["Inter Display Regular"]]
                 ]
               }
             ],
@@ -2863,7 +2863,7 @@
                     "case",
                     ["==", ["get", "script2"], "Devanagari"],
                     ["literal", ["Noto Sans Devanagari Regular v1"]],
-                    ["literal", ["SF Pro Display Regular"]]
+                    ["literal", ["Inter Display Regular"]]
                   ]
                 },
                 "\n",
@@ -2874,7 +2874,7 @@
                     "case",
                     ["==", ["get", "script3"], "Devanagari"],
                     ["literal", ["Noto Sans Devanagari Regular v1"]],
-                    ["literal", ["SF Pro Display Regular"]]
+                    ["literal", ["Inter Display Regular"]]
                   ]
                 }
               ],
@@ -2896,7 +2896,7 @@
                     "case",
                     ["==", ["get", "script"], "Devanagari"],
                     ["literal", ["Noto Sans Devanagari Regular v1"]],
-                    ["literal", ["SF Pro Display Regular"]]
+                    ["literal", ["Inter Display Regular"]]
                   ]
                 },
                 "\n",
@@ -2907,7 +2907,7 @@
                     "case",
                     ["==", ["get", "script3"], "Devanagari"],
                     ["literal", ["Noto Sans Devanagari Regular v1"]],
-                    ["literal", ["SF Pro Display Regular"]]
+                    ["literal", ["Inter Display Regular"]]
                   ]
                 }
               ],
@@ -2928,7 +2928,7 @@
                     "case",
                     ["==", ["get", "script"], "Devanagari"],
                     ["literal", ["Noto Sans Devanagari Regular v1"]],
-                    ["literal", ["SF Pro Display Regular"]]
+                    ["literal", ["Inter Display Regular"]]
                   ]
                 },
                 "\n",
@@ -2939,7 +2939,7 @@
                     "case",
                     ["==", ["get", "script2"], "Devanagari"],
                     ["literal", ["Noto Sans Devanagari Regular v1"]],
-                    ["literal", ["SF Pro Display Regular"]]
+                    ["literal", ["Inter Display Regular"]]
                   ]
                 }
               ]
@@ -3051,7 +3051,7 @@
                     "case",
                     ["==", ["get", "script"], "Devanagari"],
                     ["literal", ["Noto Sans Devanagari Regular v1"]],
-                    ["literal", ["SF Pro Display Regular"]]
+                    ["literal", ["Inter Display Regular"]]
                   ]
                 }
               ],
@@ -3089,7 +3089,7 @@
                   "case",
                   ["==", ["get", "script"], "Devanagari"],
                   ["literal", ["Noto Sans Devanagari Regular v1"]],
-                  ["literal", ["SF Pro Display Regular"]]
+                  ["literal", ["Inter Display Regular"]]
                 ]
               },
               "\n",
@@ -3100,7 +3100,7 @@
                   "case",
                   ["==", ["get", "script2"], "Devanagari"],
                   ["literal", ["Noto Sans Devanagari Regular v1"]],
-                  ["literal", ["SF Pro Display Regular"]]
+                  ["literal", ["Inter Display Regular"]]
                 ]
               }
             ],
@@ -3124,7 +3124,7 @@
                     "case",
                     ["==", ["get", "script2"], "Devanagari"],
                     ["literal", ["Noto Sans Devanagari Regular v1"]],
-                    ["literal", ["SF Pro Display Regular"]]
+                    ["literal", ["Inter Display Regular"]]
                   ]
                 }
               ],
@@ -3145,7 +3145,7 @@
                     "case",
                     ["==", ["get", "script"], "Devanagari"],
                     ["literal", ["Noto Sans Devanagari Regular v1"]],
-                    ["literal", ["SF Pro Display Regular"]]
+                    ["literal", ["Inter Display Regular"]]
                   ]
                 }
               ]
@@ -3166,7 +3166,7 @@
                   "case",
                   ["==", ["get", "script"], "Devanagari"],
                   ["literal", ["Noto Sans Devanagari Regular v1"]],
-                  ["literal", ["SF Pro Display Regular"]]
+                  ["literal", ["Inter Display Regular"]]
                 ]
               },
               "\n",
@@ -3177,7 +3177,7 @@
                   "case",
                   ["==", ["get", "script2"], "Devanagari"],
                   ["literal", ["Noto Sans Devanagari Regular v1"]],
-                  ["literal", ["SF Pro Display Regular"]]
+                  ["literal", ["Inter Display Regular"]]
                 ]
               },
               "\n",
@@ -3188,7 +3188,7 @@
                   "case",
                   ["==", ["get", "script3"], "Devanagari"],
                   ["literal", ["Noto Sans Devanagari Regular v1"]],
-                  ["literal", ["SF Pro Display Regular"]]
+                  ["literal", ["Inter Display Regular"]]
                 ]
               }
             ],
@@ -3212,7 +3212,7 @@
                     "case",
                     ["==", ["get", "script2"], "Devanagari"],
                     ["literal", ["Noto Sans Devanagari Regular v1"]],
-                    ["literal", ["SF Pro Display Regular"]]
+                    ["literal", ["Inter Display Regular"]]
                   ]
                 },
                 "\n",
@@ -3223,7 +3223,7 @@
                     "case",
                     ["==", ["get", "script3"], "Devanagari"],
                     ["literal", ["Noto Sans Devanagari Regular v1"]],
-                    ["literal", ["SF Pro Display Regular"]]
+                    ["literal", ["Inter Display Regular"]]
                   ]
                 }
               ],
@@ -3245,7 +3245,7 @@
                     "case",
                     ["==", ["get", "script"], "Devanagari"],
                     ["literal", ["Noto Sans Devanagari Regular v1"]],
-                    ["literal", ["SF Pro Display Regular"]]
+                    ["literal", ["Inter Display Regular"]]
                   ]
                 },
                 "\n",
@@ -3256,7 +3256,7 @@
                     "case",
                     ["==", ["get", "script3"], "Devanagari"],
                     ["literal", ["Noto Sans Devanagari Regular v1"]],
-                    ["literal", ["SF Pro Display Regular"]]
+                    ["literal", ["Inter Display Regular"]]
                   ]
                 }
               ],
@@ -3277,7 +3277,7 @@
                     "case",
                     ["==", ["get", "script"], "Devanagari"],
                     ["literal", ["Noto Sans Devanagari Regular v1"]],
-                    ["literal", ["SF Pro Display Regular"]]
+                    ["literal", ["Inter Display Regular"]]
                   ]
                 },
                 "\n",
@@ -3288,14 +3288,14 @@
                     "case",
                     ["==", ["get", "script2"], "Devanagari"],
                     ["literal", ["Noto Sans Devanagari Regular v1"]],
-                    ["literal", ["SF Pro Display Regular"]]
+                    ["literal", ["Inter Display Regular"]]
                   ]
                 }
               ]
             ]
           ]
         ],
-        "text-font": ["SF Pro Display Regular"],
+        "text-font": ["Inter Display Regular"],
         "text-max-width": 7,
         "text-letter-spacing": 0.1,
         "text-padding": [
@@ -3380,7 +3380,7 @@
                     "case",
                     ["==", ["get", "script"], "Devanagari"],
                     ["literal", ["Noto Sans Devanagari Regular v1"]],
-                    ["literal", ["SF Pro Display Regular"]]
+                    ["literal", ["Inter Display Regular"]]
                   ]
                 }
               ],
@@ -3418,7 +3418,7 @@
                   "case",
                   ["==", ["get", "script"], "Devanagari"],
                   ["literal", ["Noto Sans Devanagari Regular v1"]],
-                  ["literal", ["SF Pro Display Regular"]]
+                  ["literal", ["Inter Display Regular"]]
                 ]
               },
               "\n",
@@ -3429,7 +3429,7 @@
                   "case",
                   ["==", ["get", "script2"], "Devanagari"],
                   ["literal", ["Noto Sans Devanagari Regular v1"]],
-                  ["literal", ["SF Pro Display Regular"]]
+                  ["literal", ["Inter Display Regular"]]
                 ]
               }
             ],
@@ -3453,7 +3453,7 @@
                     "case",
                     ["==", ["get", "script2"], "Devanagari"],
                     ["literal", ["Noto Sans Devanagari Regular v1"]],
-                    ["literal", ["SF Pro Display Regular"]]
+                    ["literal", ["Inter Display Regular"]]
                   ]
                 }
               ],
@@ -3474,7 +3474,7 @@
                     "case",
                     ["==", ["get", "script"], "Devanagari"],
                     ["literal", ["Noto Sans Devanagari Regular v1"]],
-                    ["literal", ["SF Pro Display Regular"]]
+                    ["literal", ["Inter Display Regular"]]
                   ]
                 }
               ]
@@ -3495,7 +3495,7 @@
                   "case",
                   ["==", ["get", "script"], "Devanagari"],
                   ["literal", ["Noto Sans Devanagari Regular v1"]],
-                  ["literal", ["SF Pro Display Regular"]]
+                  ["literal", ["Inter Display Regular"]]
                 ]
               },
               "\n",
@@ -3506,7 +3506,7 @@
                   "case",
                   ["==", ["get", "script2"], "Devanagari"],
                   ["literal", ["Noto Sans Devanagari Regular v1"]],
-                  ["literal", ["SF Pro Display Regular"]]
+                  ["literal", ["Inter Display Regular"]]
                 ]
               },
               "\n",
@@ -3517,7 +3517,7 @@
                   "case",
                   ["==", ["get", "script3"], "Devanagari"],
                   ["literal", ["Noto Sans Devanagari Regular v1"]],
-                  ["literal", ["SF Pro Display Regular"]]
+                  ["literal", ["Inter Display Regular"]]
                 ]
               }
             ],
@@ -3541,7 +3541,7 @@
                     "case",
                     ["==", ["get", "script2"], "Devanagari"],
                     ["literal", ["Noto Sans Devanagari Regular v1"]],
-                    ["literal", ["SF Pro Display Regular"]]
+                    ["literal", ["Inter Display Regular"]]
                   ]
                 },
                 "\n",
@@ -3552,7 +3552,7 @@
                     "case",
                     ["==", ["get", "script3"], "Devanagari"],
                     ["literal", ["Noto Sans Devanagari Regular v1"]],
-                    ["literal", ["SF Pro Display Regular"]]
+                    ["literal", ["Inter Display Regular"]]
                   ]
                 }
               ],
@@ -3574,7 +3574,7 @@
                     "case",
                     ["==", ["get", "script"], "Devanagari"],
                     ["literal", ["Noto Sans Devanagari Regular v1"]],
-                    ["literal", ["SF Pro Display Regular"]]
+                    ["literal", ["Inter Display Regular"]]
                   ]
                 },
                 "\n",
@@ -3585,7 +3585,7 @@
                     "case",
                     ["==", ["get", "script3"], "Devanagari"],
                     ["literal", ["Noto Sans Devanagari Regular v1"]],
-                    ["literal", ["SF Pro Display Regular"]]
+                    ["literal", ["Inter Display Regular"]]
                   ]
                 }
               ],
@@ -3606,7 +3606,7 @@
                     "case",
                     ["==", ["get", "script"], "Devanagari"],
                     ["literal", ["Noto Sans Devanagari Regular v1"]],
-                    ["literal", ["SF Pro Display Regular"]]
+                    ["literal", ["Inter Display Regular"]]
                   ]
                 },
                 "\n",
@@ -3617,7 +3617,7 @@
                     "case",
                     ["==", ["get", "script2"], "Devanagari"],
                     ["literal", ["Noto Sans Devanagari Regular v1"]],
-                    ["literal", ["SF Pro Display Regular"]]
+                    ["literal", ["Inter Display Regular"]]
                   ]
                 }
               ]
@@ -3627,8 +3627,8 @@
         "text-font": [
           "case",
           ["<=", ["get", "min_zoom"], 5],
-          ["literal", ["SF Pro Display Semibold"]],
-          ["literal", ["SF Pro Display Semibold"]]
+          ["literal", ["Inter Display SemiBold"]],
+          ["literal", ["Inter Display SemiBold"]]
         ],
         "text-padding": [
           "interpolate",
@@ -3785,7 +3785,7 @@
                       "case",
                       ["==", ["get", "script"], "Devanagari"],
                       ["literal", ["Noto Sans Devanagari Regular v1"]],
-                      ["literal", ["SF Pro Display Regular"]]
+                      ["literal", ["Inter Display Regular"]]
                     ]
                   }
                 ],
@@ -3823,7 +3823,7 @@
                     "case",
                     ["==", ["get", "script"], "Devanagari"],
                     ["literal", ["Noto Sans Devanagari Regular v1"]],
-                    ["literal", ["SF Pro Display Regular"]]
+                    ["literal", ["Inter Display Regular"]]
                   ]
                 },
                 "\n",
@@ -3834,7 +3834,7 @@
                     "case",
                     ["==", ["get", "script2"], "Devanagari"],
                     ["literal", ["Noto Sans Devanagari Regular v1"]],
-                    ["literal", ["SF Pro Display Regular"]]
+                    ["literal", ["Inter Display Regular"]]
                   ]
                 }
               ],
@@ -3858,7 +3858,7 @@
                       "case",
                       ["==", ["get", "script2"], "Devanagari"],
                       ["literal", ["Noto Sans Devanagari Regular v1"]],
-                      ["literal", ["SF Pro Display Regular"]]
+                      ["literal", ["Inter Display Regular"]]
                     ]
                   }
                 ],
@@ -3879,7 +3879,7 @@
                       "case",
                       ["==", ["get", "script"], "Devanagari"],
                       ["literal", ["Noto Sans Devanagari Regular v1"]],
-                      ["literal", ["SF Pro Display Regular"]]
+                      ["literal", ["Inter Display Regular"]]
                     ]
                   }
                 ]
@@ -3905,7 +3905,7 @@
                     "case",
                     ["==", ["get", "script"], "Devanagari"],
                     ["literal", ["Noto Sans Devanagari Regular v1"]],
-                    ["literal", ["SF Pro Display Regular"]]
+                    ["literal", ["Inter Display Regular"]]
                   ]
                 },
                 "\n",
@@ -3916,7 +3916,7 @@
                     "case",
                     ["==", ["get", "script2"], "Devanagari"],
                     ["literal", ["Noto Sans Devanagari Regular v1"]],
-                    ["literal", ["SF Pro Display Regular"]]
+                    ["literal", ["Inter Display Regular"]]
                   ]
                 },
                 "\n",
@@ -3927,7 +3927,7 @@
                     "case",
                     ["==", ["get", "script3"], "Devanagari"],
                     ["literal", ["Noto Sans Devanagari Regular v1"]],
-                    ["literal", ["SF Pro Display Regular"]]
+                    ["literal", ["Inter Display Regular"]]
                   ]
                 }
               ],
@@ -3951,7 +3951,7 @@
                       "case",
                       ["==", ["get", "script2"], "Devanagari"],
                       ["literal", ["Noto Sans Devanagari Regular v1"]],
-                      ["literal", ["SF Pro Display Regular"]]
+                      ["literal", ["Inter Display Regular"]]
                     ]
                   },
                   "\n",
@@ -3962,7 +3962,7 @@
                       "case",
                       ["==", ["get", "script3"], "Devanagari"],
                       ["literal", ["Noto Sans Devanagari Regular v1"]],
-                      ["literal", ["SF Pro Display Regular"]]
+                      ["literal", ["Inter Display Regular"]]
                     ]
                   }
                 ],
@@ -3984,7 +3984,7 @@
                       "case",
                       ["==", ["get", "script"], "Devanagari"],
                       ["literal", ["Noto Sans Devanagari Regular v1"]],
-                      ["literal", ["SF Pro Display Regular"]]
+                      ["literal", ["Inter Display Regular"]]
                     ]
                   },
                   "\n",
@@ -3995,7 +3995,7 @@
                       "case",
                       ["==", ["get", "script3"], "Devanagari"],
                       ["literal", ["Noto Sans Devanagari Regular v1"]],
-                      ["literal", ["SF Pro Display Regular"]]
+                      ["literal", ["Inter Display Regular"]]
                     ]
                   }
                 ],
@@ -4016,7 +4016,7 @@
                       "case",
                       ["==", ["get", "script"], "Devanagari"],
                       ["literal", ["Noto Sans Devanagari Regular v1"]],
-                      ["literal", ["SF Pro Display Regular"]]
+                      ["literal", ["Inter Display Regular"]]
                     ]
                   },
                   "\n",
@@ -4027,7 +4027,7 @@
                       "case",
                       ["==", ["get", "script2"], "Devanagari"],
                       ["literal", ["Noto Sans Devanagari Regular v1"]],
-                      ["literal", ["SF Pro Display Regular"]]
+                      ["literal", ["Inter Display Regular"]]
                     ]
                   }
                 ]
@@ -4035,7 +4035,7 @@
             ]
           ]
         ],
-        "text-font": ["SF Pro Display Regular"],
+        "text-font": ["Inter Display Regular"],
         "text-size": ["interpolate", ["linear"], ["zoom"], 3, 11, 7, 16],
         "text-radial-offset": 0.2,
         "text-anchor": "center",
@@ -4061,7 +4061,7 @@
           ["coalesce", ["get", "name:en"], ["get", "name:en"]],
           {}
         ],
-        "text-font": ["SF Pro Display Semibold"],
+        "text-font": ["Inter Display SemiBold"],
         "text-size": [
           "interpolate",
           ["linear"],

@@ -1339,7 +1339,7 @@
       "filter": ["in", "kind", "river", "stream"],
       "layout": {
         "symbol-placement": "line",
-        "text-font": ["SF Pro Display Regular Italic"],
+        "text-font": ["Inter Display Italic"],
         "text-field": ["coalesce", ["get", "name:en"], ["get", "name"]],
         "text-size": 12,
         "text-letter-spacing": 0.2
@@ -1356,7 +1356,7 @@
       "layout": {
         "symbol-sort-key": ["get", "min_zoom"],
         "symbol-placement": "line",
-        "text-font": ["SF Pro Display Regular"],
+        "text-font": ["Inter Display Regular"],
         "text-field": ["coalesce", ["get", "name:en"], ["get", "name"]],
         "text-size": 12
       },
@@ -1384,7 +1384,7 @@
         "fjord"
       ],
       "layout": {
-        "text-font": ["SF Pro Display Regular Italic"],
+        "text-font": ["Inter Display Italic"],
         "text-field": ["coalesce", ["get", "name:en"], ["get", "name"]],
         "text-size": ["interpolate", ["linear"], ["zoom"], 3, 10, 10, 12],
         "text-letter-spacing": 0.1,
@@ -1400,7 +1400,7 @@
       "source-layer": "water",
       "filter": ["in", "kind", "lake", "water"],
       "layout": {
-        "text-font": ["SF Pro Display Regular Italic"],
+        "text-font": ["Inter Display Italic"],
         "text-field": ["coalesce", ["get", "name:en"], ["get", "name"]],
         "text-size": ["interpolate", ["linear"], ["zoom"], 3, 0, 6, 12, 10, 12],
         "text-letter-spacing": 0.1,
@@ -1418,7 +1418,7 @@
       "layout": {
         "symbol-sort-key": ["get", "min_zoom"],
         "symbol-placement": "line",
-        "text-font": ["SF Pro Display Regular"],
+        "text-font": ["Inter Display Regular"],
         "text-field": [
           "step",
           ["zoom"],
@@ -1528,7 +1528,7 @@
           "train_station",
           ["get", "kind"]
         ],
-        "text-font": ["SF Pro Display Semibold"],
+        "text-font": ["Inter Display SemiBold"],
         "text-justify": "auto",
         "text-field": ["coalesce", ["get", "name:en"], ["get", "name"]],
         "text-size": ["interpolate", ["linear"], ["zoom"], 17, 10, 19, 16],
@@ -1597,7 +1597,7 @@
       "layout": {
         "symbol-sort-key": ["get", "min_zoom"],
         "text-field": ["coalesce", ["get", "name:en"], ["get", "name"]],
-        "text-font": ["SF Pro Display Regular"],
+        "text-font": ["Inter Display Regular"],
         "text-max-width": 7,
         "text-letter-spacing": 0.1,
         "text-padding": [
@@ -1646,8 +1646,8 @@
         "text-font": [
           "case",
           ["<=", ["get", "min_zoom"], 5],
-          ["literal", ["SF Pro Display Semibold"]],
-          ["literal", ["SF Pro Display Semibold"]]
+          ["literal", ["Inter Display SemiBold"]],
+          ["literal", ["Inter Display SemiBold"]]
         ],
         "text-padding": [
           "interpolate",
@@ -1766,7 +1766,7 @@
           6,
           ["coalesce", ["get", "name:en"], ["get", "name"]]
         ],
-        "text-font": ["SF Pro Display Regular"],
+        "text-font": ["Inter Display Regular"],
         "text-size": ["interpolate", ["linear"], ["zoom"], 3, 11, 7, 16],
         "text-radial-offset": 0.2,
         "text-anchor": "center",
@@ -1788,7 +1788,7 @@
       "layout": {
         "symbol-sort-key": ["get", "min_zoom"],
         "text-field": ["coalesce", ["get", "name:en"], ["get", "name"]],
-        "text-font": ["SF Pro Display Semibold"],
+        "text-font": ["Inter Display SemiBold"],
         "text-size": [
           "interpolate",
           ["linear"],
