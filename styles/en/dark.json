@@ -10,7 +10,7 @@
       "maxzoom": 15
     }
   },
-  "sprite": "https://map-assets.runvector.app/sprites/v4/dark",
+  "sprite": "https://map-assets.runvector.app/sprites/v5/dark",
   "glyphs": "https://map-assets.runvector.app/fonts/{fontstack}/{range}.pbf",
   "layers": [
     {
@@ -1331,6 +1331,114 @@
       }
     },
     {
+      "id": "highway_shield_us_business",
+      "type": "symbol",
+      "source": "protomaps",
+      "source-layer": "roads",
+      "minzoom": 8,
+      "filter": [
+        "all",
+        ["has", "ref"],
+        ["==", ["get", "kind"], "major_road"],
+        ["==", ["get", "network"], "US:US"],
+        [
+          "any",
+          ["in", "Business", ["get", "ref"]],
+          ["in", "BUS", ["get", "ref"]]
+        ]
+      ],
+      "layout": {
+        "symbol-placement": "line",
+        "symbol-spacing": 250,
+        "icon-image": [
+          "step",
+          ["length", ["slice", ["get", "ref"], 0, 3]],
+          "shield_us_interstate_business_2",
+          3,
+          "shield_us_interstate_business_3"
+        ],
+        "icon-rotation-alignment": "viewport",
+        "icon-size": 1,
+        "text-field": ["slice", ["get", "ref"], 0, 3],
+        "text-font": ["Roadgeek 2005 Series D Regular"],
+        "text-size": 10,
+        "text-rotation-alignment": "viewport",
+        "text-max-angle": 38
+      },
+      "paint": {"text-color": "#ffffff"}
+    },
+    {
+      "id": "highway_shield_interstate",
+      "type": "symbol",
+      "source": "protomaps",
+      "source-layer": "roads",
+      "minzoom": 7,
+      "filter": [
+        "all",
+        ["has", "ref"],
+        ["==", ["get", "kind"], "highway"],
+        ["match", ["get", "network"], ["US:I", "US:US_I"], true, false]
+      ],
+      "layout": {
+        "symbol-placement": "line",
+        "symbol-spacing": 250,
+        "icon-image": [
+          "step",
+          ["length", ["slice", ["get", "ref"], 0, 3]],
+          "shield_us_interstate_2",
+          3,
+          "shield_us_interstate_3"
+        ],
+        "icon-rotation-alignment": "viewport",
+        "icon-size": 1,
+        "text-field": ["slice", ["get", "ref"], 0, 3],
+        "text-font": ["Roadgeek 2005 Series D Regular"],
+        "text-size": 10,
+        "text-rotation-alignment": "viewport",
+        "text-max-angle": 38
+      },
+      "paint": {"text-color": "#ffffff"}
+    },
+    {
+      "id": "highway_shield_us",
+      "type": "symbol",
+      "source": "protomaps",
+      "source-layer": "roads",
+      "minzoom": 8,
+      "filter": [
+        "all",
+        ["has", "ref"],
+        ["==", ["get", "kind"], "major_road"],
+        ["==", ["get", "network"], "US:US"],
+        ["!",
+          [
+            "any",
+            ["in", "Business", ["get", "ref"]],
+            ["in", "BUS", ["get", "ref"]]
+          ]
+        ]
+      ],
+      "layout": {
+        "symbol-placement": "line",
+        "symbol-spacing": 250,
+        "icon-image": [
+          "step",
+          ["length", ["slice", ["get", "ref"], 0, 3]],
+          "shield_badge_2",
+          3,
+          "shield_badge_3"
+        ],
+        "icon-rotation-alignment": "viewport",
+        "icon-size": 1,
+        "text-field": ["slice", ["get", "ref"], 0, 3],
+        "text-font": ["Roadgeek 2005 Series D Regular"],
+        "text-size": 10,
+        "text-rotation-alignment": "viewport",
+        "text-max-angle": 38
+      },
+      "paint": {"text-color": "#000000"}
+    },
+    {
       "id": "water_waterway_label",
       "type": "symbol",
       "source": "protomaps",
@@ -1938,74 +2046,20 @@
       "type": "symbol",
       "source": "protomaps",
       "source-layer": "roads",
-      "minzoom": 8,
+      "minzoom": 11,
       "filter": ["in", "kind", "highway", "major_road"],
       "layout": {
         "symbol-sort-key": ["get", "min_zoom"],
         "symbol-placement": "line",
         "text-font": ["Inter Display Regular"],
-        "text-field": [
-          "step",
-          ["zoom"],
-          [
-            "case",
-            ["has", "ref"],
-            [
-              "concat",
-              [
-                "case",
-                ["==", ["get", "network"], "US:US_I"],
-                "I-",
-                ["==", ["get", "network"], "US:US"],
-                "US-",
-                ""
-              ],
-              ["get", "ref"]
-            ],
-            ""
-          ],
-          12,
-          [
-            "concat",
-            [
-              "case",
-              ["has", "ref"],
-              [
-                "concat",
-                [
-                  "case",
-                  ["==", ["get", "network"], "US:US_I"],
-                  "I-",
-                  ["==", ["get", "network"], "US:US"],
-                  "US-",
-                  ""
-                ],
-                ["get", "ref"],
-                " "
-              ],
-              ""
-            ],
-            [
-              "case",
-              ["any", ["has", "name"], ["has", "pgf:name"]],
-              [
-                "coalesce",
-                ["get", "name:en"],
-                ["get", "pgf:name"],
-                ["get", "name"]
-              ],
-              ""
-            ]
-          ]
-        ],
-        "text-size": 12.5,
-        "text-transform": "none"
+        "text-field": ["coalesce", ["get", "name:en"], ["get", "name"]],
+        "text-size": 10
       },
       "paint": {
-        "text-color": "rgba(234, 234, 234, 1)",
+        "text-color": "#91888b",
         "text-halo-color": "#1f1f1f",
-        "text-halo-width": 5,
-        "text-halo-blur": 5
+        "text-halo-width": 2,
+        "text-halo-blur": 2
       }
     },
     {
