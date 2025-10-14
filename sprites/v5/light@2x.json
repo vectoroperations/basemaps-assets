@@ -99,56 +99,56 @@
   },
   "shield_badge_2": {
     "height": 20,
-    "pixelRatio": 2,
+    "pixelRatio": 1,
     "width": 20,
     "x": 38,
     "y": 190
   },
   "shield_badge_3": {
     "height": 20,
-    "pixelRatio": 2,
+    "pixelRatio": 1,
     "width": 25,
     "x": 228,
     "y": 38
   },
   "shield_badge_crossbar_2": {
     "height": 20,
-    "pixelRatio": 2,
+    "pixelRatio": 1,
     "width": 20,
     "x": 50,
     "y": 210
   },
   "shield_badge_crossbar_3": {
     "height": 20,
-    "pixelRatio": 2,
+    "pixelRatio": 1,
     "width": 25,
     "x": 228,
     "y": 58
   },
   "shield_us_interstate_2": {
     "height": 20,
-    "pixelRatio": 2,
+    "pixelRatio": 1,
     "width": 20,
     "x": 58,
     "y": 190
   },
   "shield_us_interstate_3": {
     "height": 20,
-    "pixelRatio": 2,
+    "pixelRatio": 1,
     "width": 25,
     "x": 0,
     "y": 228
   },
   "shield_us_interstate_business_2": {
     "height": 20,
-    "pixelRatio": 2,
+    "pixelRatio": 1,
     "width": 20,
     "x": 50,
     "y": 230
   },
   "shield_us_interstate_business_3": {
     "height": 20,
-    "pixelRatio": 2,
+    "pixelRatio": 1,
     "width": 25,
     "x": 25,
     "y": 228
