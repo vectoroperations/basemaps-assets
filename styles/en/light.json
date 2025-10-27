@@ -1010,6 +1010,56 @@
       }
     },
     {
+      "id": "roads_us_highway_casing",
+      "type": "line",
+      "source": "protomaps",
+      "source-layer": "roads",
+      "filter": [
+        "all",
+        ["==", ["get", "kind"], "major_road"],
+        ["any",
+          ["==", ["get", "network"], "US"],
+          ["in", "US ", ["get", "ref"]]
+        ]
+      ],
+      "paint": {
+        "line-color": "#4a4a4a",
+        "line-width": [
+          "interpolate",
+          ["exponential", 1.6],
+          ["zoom"],
+          9, 1.5,
+          15, 4,
+          18, 15
+        ]
+      }
+    },
+    {
+      "id": "roads_us_highway",
+      "type": "line",
+      "source": "protomaps",
+      "source-layer": "roads",
+      "filter": [
+        "all",
+        ["==", ["get", "kind"], "major_road"],
+        ["any",
+          ["==", ["get", "network"], "US"],
+          ["in", "US ", ["get", "ref"]]
+        ]
+      ],
+      "paint": {
+        "line-color": "#b8b8b8",
+        "line-width": [
+          "interpolate",
+          ["exponential", 1.6],
+          ["zoom"],
+          9, 0.8,
+          15, 3,
+          18, 13
+        ]
+      }
+    },
+    {
       "id": "roads_rail",
       "type": "line",
       "source": "protomaps",
@@ -1338,9 +1388,12 @@
       "minzoom": 8,
       "filter": [
         "all",
-        ["has", "ref"],
+        ["has", "shield_text"],
         ["==", ["get", "kind"], "major_road"],
-        ["==", ["get", "network"], "US:US"],
+        ["any",
+          ["==", ["get", "network"], "US"],
+          ["in", "US ", ["get", "ref"]]
+        ],
         [
           "any",
           ["in", "Business", ["get", "ref"]],
@@ -1352,14 +1405,35 @@
         "symbol-spacing": 250,
         "icon-image": [
           "step",
-          ["length", ["slice", ["get", "ref"], 0, 3]],
+          [
+            "length",
+            [
+              "slice",
+              ["get", "ref"],
+              3,
+              [
+                "coalesce",
+                ["index-of", " ", ["get", "ref"], 3],
+                ["length", ["get", "ref"]]
+              ]
+            ]
+          ],
           "shield_us_interstate_business_2",
           3,
           "shield_us_interstate_business_3"
         ],
         "icon-rotation-alignment": "viewport",
         "icon-size": 1,
-        "text-field": ["slice", ["get", "ref"], 0, 3],
+        "text-field": [
+          "slice",
+          ["get", "ref"],
+          3,
+          [
+            "coalesce",
+            ["index-of", " ", ["get", "ref"], 3],
+            ["length", ["get", "ref"]]
+          ]
+        ],
         "text-font": ["Roadgeek 2005 Series D Regular"],
         "text-size": 10,
         "text-rotation-alignment": "viewport",
@@ -1372,26 +1446,27 @@
       "type": "symbol",
       "source": "protomaps",
       "source-layer": "roads",
-      "minzoom": 7,
+      "minzoom": 6,
       "filter": [
         "all",
-        ["has", "ref"],
+        ["has", "shield_text"],
         ["==", ["get", "kind"], "highway"],
-        ["match", ["get", "network"], ["US:I", "US:US_I"], true, false]
+        ["==", ["get", "network"], "US:I"]
       ],
       "layout": {
         "symbol-placement": "line",
         "symbol-spacing": 250,
+        "symbol-sort-key": 1,
         "icon-image": [
           "step",
-          ["length", ["slice", ["get", "ref"], 0, 3]],
+          ["length", ["get", "shield_text"]],
           "shield_us_interstate_2",
           3,
           "shield_us_interstate_3"
         ],
         "icon-rotation-alignment": "viewport",
         "icon-size": 1,
-        "text-field": ["slice", ["get", "ref"], 0, 3],
+        "text-field": ["get", "shield_text"],
         "text-font": ["Roadgeek 2005 Series D Regular"],
         "text-size": 10,
         "text-rotation-alignment": "viewport",
@@ -1407,9 +1482,9 @@
       "minzoom": 8,
       "filter": [
         "all",
-        ["has", "ref"],
+        ["has", "shield_text"],
         ["==", ["get", "kind"], "major_road"],
-        ["==", ["get", "network"], "US:US"],
+        ["==", ["get", "network"], "US"],
         ["!",
           [
             "any",
@@ -1423,14 +1498,14 @@
         "symbol-spacing": 250,
         "icon-image": [
           "step",
-          ["length", ["slice", ["get", "ref"], 0, 3]],
+          ["length", ["get", "shield_text"]],
           "shield_badge_2",
           3,
           "shield_badge_3"
         ],
         "icon-rotation-alignment": "viewport",
         "icon-size": 1,
-        "text-field": ["slice", ["get", "ref"], 0, 3],
+        "text-field": ["get", "shield_text"],
         "text-font": ["Roadgeek 2005 Series D Regular"],
         "text-size": 10,
         "text-rotation-alignment": "viewport",
