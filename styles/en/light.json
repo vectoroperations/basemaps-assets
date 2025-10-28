@@ -1973,9 +1973,9 @@
               ["slice", ["get", "shield_text"], 2, 5]
             ]
           ],
-          "shield_escutcheon",
+          "shield_us_va_2",
           3,
-          "shield_escutcheon"
+          "shield_us_va_3"
         ],
         "icon-rotation-alignment": "viewport",
         "icon-size": 1,

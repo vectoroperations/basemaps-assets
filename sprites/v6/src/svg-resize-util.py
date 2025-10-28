@@ -8,8 +8,8 @@ for filename in os.listdir(directory):
     if not filename.endswith('.svg'):
         continue
     
-    # Skip all shield files - leave them at original dimensions
-    if filename.startswith('shield_'):
+    # Skip all shield files EXCEPT Virginia and Maryland shields
+    if filename.startswith('shield_') and not any(x in filename for x in ['shield_us_md']):
         print(f'⊘ {filename} (skipped - keeping original dimensions)')
         continue
     
@@ -18,27 +18,39 @@ for filename in os.listdir(directory):
     with open(filepath, 'r') as f:
         content = f.read()
     
-    # Standard square icons - resize to 19x19
-    new_width = 19
-    new_height = 19
+    # Target size
+    new_size = 20
     
-    # Fix the svg tag
-    def fix_svg_tag(match):
-        tag = match.group(0)
-        # Remove existing width and height
-        tag = re.sub(r'\s+width="[^"]*"', '', tag)
-        tag = re.sub(r'\s+height="[^"]*"', '', tag)
-        # Add new dimensions
-        tag = tag.rstrip('>') + f' width="{new_width}" height="{new_height}">'
-        return tag
+    # Extract current width/height
+    width_match = re.search(r'<svg[^>]*width="([\d.]+)"', content)
+    height_match = re.search(r'<svg[^>]*height="([\d.]+)"', content)
     
-    content = re.sub(r'<svg[^>]*>', fix_svg_tag, content, count=1)
+    if not width_match or not height_match:
+        print(f'⊘ {filename} - no dimensions found')
+        continue
+    
+    old_width = float(width_match.group(1))
+    old_height = float(height_match.group(1))
+    
+    # Update the SVG: set new size and create/update viewBox with old dimensions
+    def update_svg(match):
+        svg_content = match.group(0)
+        # Remove existing viewBox, width, height
+        svg_content = re.sub(r'\s*viewBox="[^"]*"', '', svg_content)
+        svg_content = re.sub(r'\s*width="[^"]*"', '', svg_content)
+        svg_content = re.sub(r'\s*height="[^"]*"', '', svg_content)
+        # Add back with new values
+        svg_content = svg_content.rstrip('>')
+        svg_content += f' width="{new_size}" height="{new_size}" viewBox="0 0 {old_width} {old_height}">'
+        return svg_content
+    
+    content = re.sub(r'<svg[^>]*>', update_svg, content)
     
     with open(filepath, 'w') as f:
         f.write(content)
     
-    print(f'✓ {filename} → {new_width}×{new_height}')
+    print(f'✓ {filename}: {old_width}x{old_height} → {new_size}x{new_size} (viewBox preserves original)')
 
 print('\nDone! Now run:')
-print('spreet --ratio 1 dark svg_icons')
-print('spreet --ratio 2 dark@2x svg_icons')
+print('spreet --ratio 1 light light')
+print('spreet --ratio 2 light@2x light')

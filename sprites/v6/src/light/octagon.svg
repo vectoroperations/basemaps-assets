@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="utf-8" ?>
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="20" height="20">
-	<path fill="#FFF" d="M10 19.5L1.82245 17.5L0.5 10L1.82245 2.5L10 0.5L18.1775 2.5L19.5 10L18.1775 17.5L10 19.5Z"/>
-	<path fill="none" stroke="#000" stroke-width="1" stroke-miterlimit="10" d="M10 19.5L1.82245 17.5L0.5 10L1.82245 2.5L10 0.5L18.1775 2.5L19.5 10L18.1775 17.5L10 19.5Z"/>
-</svg>
+<?xml version='1.0' encoding='utf-8'?>
+<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20.0 20.0">
+	<g transform="scale(1.0)"><path fill="#FFF" d="M10 19.5L1.82245 17.5L0.5 10L1.82245 2.5L10 0.5L18.1775 2.5L19.5 10L18.1775 17.5L10 19.5Z" />
+	<path fill="none" stroke="#000" stroke-width="1" stroke-miterlimit="10" d="M10 19.5L1.82245 17.5L0.5 10L1.82245 2.5L10 0.5L18.1775 2.5L19.5 10L18.1775 17.5L10 19.5Z" />
+</g></svg>

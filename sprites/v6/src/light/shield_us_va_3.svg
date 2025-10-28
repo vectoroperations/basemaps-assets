@@ -7,9 +7,7 @@
    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
    xmlns:svg="http://www.w3.org/2000/svg"
    xmlns="http://www.w3.org/2000/svg"
-   version="1.1"
-   width="750"
-   height="600">
+   version="1.1" width="20" height="20" viewBox="0 0 750.0 600.0">
   <defs
      id="defs4" />
   <metadata
