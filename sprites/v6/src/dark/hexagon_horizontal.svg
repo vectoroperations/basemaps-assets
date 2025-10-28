@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="34" height="20">
+	<path fill="#FFF" d="M17 19.5L0.5 16.5L0.5 3.5L17 0.5L33.5 3.5L33.5 16.5L17 19.5Z"/>
+	<path fill="none" stroke="#000" stroke-width="1" stroke-miterlimit="10" d="M17 19.5L0.5 16.5L0.5 3.5L17 0.5L33.5 3.5L33.5 16.5L17 19.5Z"/>
+</svg>

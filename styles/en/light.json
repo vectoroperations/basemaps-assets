@@ -10,7 +10,7 @@
       "maxzoom": 15
     }
   },
-  "sprite": "https://map-assets.runvector.app/sprites/v5/light",
+  "sprite": "https://map-assets.runvector.app/sprites/v6/light",
   "glyphs": "https://map-assets.runvector.app/fonts/{fontstack}/{range}.pbf",
   "layers": [
     {
@@ -1397,7 +1397,8 @@
         [
           "any",
           ["in", "Business", ["get", "ref"]],
-          ["in", "BUS", ["get", "ref"]]
+          ["in", "BUS", ["get", "ref"]],
+          ["in", "Bus", ["get", "ref"]]
         ]
       ],
       "layout": {
@@ -1451,7 +1452,16 @@
         "all",
         ["has", "shield_text"],
         ["==", ["get", "kind"], "highway"],
-        ["==", ["get", "network"], "US:I"]
+        [
+          "any",
+          ["==", ["get", "network"], "US:I"],
+          [
+            "all",
+            ["==", ["get", "network"], "other"],
+            ["in", "I ", ["get", "ref"]],
+            ["==", ["slice", ["get", "shield_text"], 0, 1], "I"]
+          ]
+        ]
       ],
       "layout": {
         "symbol-placement": "line",
@@ -1459,14 +1469,27 @@
         "symbol-sort-key": 1,
         "icon-image": [
           "step",
-          ["length", ["get", "shield_text"]],
+          [
+            "length",
+            [
+              "case",
+              ["==", ["slice", ["get", "shield_text"], 0, 1], "I"],
+              ["slice", ["get", "shield_text"], 1],
+              ["get", "shield_text"]
+            ]
+          ],
           "shield_us_interstate_2",
           3,
           "shield_us_interstate_3"
         ],
         "icon-rotation-alignment": "viewport",
         "icon-size": 1,
-        "text-field": ["get", "shield_text"],
+        "text-field": [
+          "case",
+          ["==", ["slice", ["get", "shield_text"], 0, 1], "I"],
+          ["slice", ["get", "shield_text"], 1],
+          ["get", "shield_text"]
+        ],
         "text-font": ["Roadgeek 2005 Series D Regular"],
         "text-size": 10,
         "text-rotation-alignment": "viewport",
@@ -1483,8 +1506,21 @@
       "filter": [
         "all",
         ["has", "shield_text"],
-        ["==", ["get", "kind"], "major_road"],
-        ["==", ["get", "network"], "US"],
+        ["any",
+          ["==", ["get", "kind"], "major_road"],
+          ["==", ["get", "kind"], "highway"]
+        ],
+        ["any",
+          ["==", ["get", "network"], "US"],
+          ["in", "US ", ["get", "ref"]]
+        ],
+        ["!", ["in", "I ", ["get", "ref"]]],
+        ["!",
+          ["all",
+            ["==", ["slice", ["get", "shield_text"], 0, 1], "I"],
+            [">=", ["to-number", ["slice", ["get", "shield_text"], 1, 2], -1], 0]
+          ]
+        ],
         ["!",
           [
             "any",
@@ -1498,18 +1534,465 @@
         "symbol-spacing": 250,
         "icon-image": [
           "step",
-          ["length", ["get", "shield_text"]],
+          [
+            "length",
+            [
+              "case",
+              ["==", ["slice", ["get", "shield_text"], 0, 2], "US"],
+              ["slice", ["get", "shield_text"], 2],
+              ["get", "shield_text"]
+            ]
+          ],
           "shield_badge_2",
           3,
           "shield_badge_3"
         ],
         "icon-rotation-alignment": "viewport",
         "icon-size": 1,
-        "text-field": ["get", "shield_text"],
+        "text-field": [
+          "case",
+          ["==", ["slice", ["get", "shield_text"], 0, 2], "US"],
+          ["slice", ["get", "shield_text"], 2],
+          ["get", "shield_text"]
+        ],
         "text-font": ["Roadgeek 2005 Series D Regular"],
         "text-size": 10,
         "text-rotation-alignment": "viewport",
         "text-max-angle": 38
+      },
+      "paint": {"text-color": "#000000"}
+    },
+    {
+      "id": "highway_shield_md",
+      "type": "symbol",
+      "source": "protomaps",
+      "source-layer": "roads",
+      "minzoom": 8,
+      "filter": [
+        "all",
+        ["has", "shield_text"],
+        ["any",
+          ["==", ["get", "kind"], "major_road"],
+          ["==", ["get", "kind"], "highway"]
+        ],
+        ["==", ["get", "network"], "other"],
+        ["in", "MD", ["get", "ref"]]
+      ],
+      "layout": {
+        "symbol-placement": "line",
+        "symbol-spacing": 250,
+        "icon-image": [
+          "step",
+          [
+            "length",
+            [
+              "slice",
+              ["get", "shield_text"],
+              2,
+              5
+            ]
+          ],
+          "shield_us_md_2",
+          3,
+          "shield_us_md_3"
+        ],
+        "icon-rotation-alignment": "viewport",
+        "icon-size": 1,
+        "text-field": [
+          "slice",
+          ["get", "shield_text"],
+          2,
+          5
+        ],
+        "text-font": ["Roadgeek 2005 Series D Regular"],
+        "text-size": 10,
+        "text-rotation-alignment": "viewport",
+        "text-offset": [0, 0.15],
+        "text-max-angle": 38,
+        "icon-allow-overlap": false,
+        "text-allow-overlap": false,
+        "icon-optional": false,
+        "text-optional": false
+      },
+      "paint": {"text-color": "#000000"}
+    },
+    {
+      "id": "highway_shield_dc",
+      "type": "symbol",
+      "source": "protomaps",
+      "source-layer": "roads",
+      "minzoom": 8,
+      "filter": [
+        "all",
+        ["has", "shield_text"],
+        ["any",
+          ["==", ["get", "kind"], "major_road"],
+          ["==", ["get", "kind"], "highway"]
+        ],
+        ["==", ["get", "network"], "other"],
+        ["in", "DC", ["get", "ref"]]
+      ],
+      "layout": {
+        "symbol-placement": "line",
+        "symbol-spacing": 250,
+        "icon-image": "shield_us_dc",
+        "icon-rotation-alignment": "viewport",
+        "icon-size": 1,
+        "text-field": [
+          "slice",
+          ["get", "shield_text"],
+          2,
+          5
+        ],
+        "text-font": ["Roadgeek 2005 Series D Regular"],
+        "text-size": 10,
+        "text-rotation-alignment": "viewport",
+        "text-max-angle": 38,
+        "icon-allow-overlap": false,
+        "text-allow-overlap": false,
+        "icon-optional": false,
+        "text-optional": false
+      },
+      "paint": {
+        "text-color": "#000000",
+        "text-halo-color": "#ffffff",
+        "text-halo-width": 2
+      }
+    },
+    {
+      "id": "highway_shield_tx_fm",
+      "type": "symbol",
+      "source": "protomaps",
+      "source-layer": "roads",
+      "minzoom": 8,
+      "filter": [
+        "all",
+        ["has", "shield_text"],
+        ["any",
+          ["==", ["get", "kind"], "major_road"],
+          ["==", ["get", "kind"], "highway"]
+        ],
+        ["==", ["get", "network"], "other"],
+        ["in", "FM", ["get", "ref"]]
+      ],
+      "layout": {
+        "symbol-placement": "line",
+        "symbol-spacing": 250,
+        "icon-image": "shield_us_tx_outline",
+        "icon-rotation-alignment": "viewport",
+        "icon-size": 1,
+        "text-field": [
+          "slice",
+          ["get", "shield_text"],
+          2,
+          6
+        ],
+        "text-font": ["Roadgeek 2005 Series D Regular"],
+        "text-size": 10,
+        "text-rotation-alignment": "viewport",
+        "text-offset": [0.1, 0],
+        "text-max-angle": 38,
+        "icon-allow-overlap": false,
+        "text-allow-overlap": false,
+        "icon-optional": false,
+        "text-optional": false
+      },
+      "paint": {
+        "text-color": "#000000",
+        "text-halo-color": "#ffffff",
+        "text-halo-width": 2
+      }
+    },
+    {
+      "id": "highway_shield_ks",
+      "type": "symbol",
+      "source": "protomaps",
+      "source-layer": "roads",
+      "minzoom": 8,
+      "filter": [
+        "all",
+        ["has", "shield_text"],
+        ["any",
+          ["==", ["get", "kind"], "major_road"],
+          ["==", ["get", "kind"], "highway"]
+        ],
+        ["==", ["get", "network"], "other"],
+        ["in", "KS", ["get", "ref"]],
+        [
+          "any",
+          ["==", ["slice", ["get", "shield_text"], 0, 2], "KS"],
+          ["==", ["slice", ["get", "shield_text"], 0, 5], "OldKS"]
+        ]
+      ],
+      "layout": {
+        "symbol-placement": "line",
+        "symbol-spacing": 250,
+        "icon-image": [
+          "step",
+          [
+            "length",
+            [
+              "case",
+              ["==", ["slice", ["get", "shield_text"], 0, 3], "Old"],
+              ["slice", ["get", "shield_text"], 5, 8],
+              ["slice", ["get", "shield_text"], 2, 5]
+            ]
+          ],
+          "shield_us_ks_2",
+          3,
+          "shield_us_ks_3"
+        ],
+        "icon-rotation-alignment": "viewport",
+        "icon-size": 1,
+        "text-field": [
+          "case",
+          ["==", ["slice", ["get", "shield_text"], 0, 3], "Old"],
+          ["slice", ["get", "shield_text"], 5, 8],
+          ["slice", ["get", "shield_text"], 2, 5]
+        ],
+        "text-font": ["Roadgeek 2005 Series D Regular"],
+        "text-size": 10,
+        "text-rotation-alignment": "viewport",
+        "text-max-angle": 38,
+        "icon-allow-overlap": false,
+        "text-allow-overlap": false,
+        "icon-optional": false,
+        "text-optional": false
+      },
+      "paint": {"text-color": "#000000"}
+    },
+    {
+      "id": "highway_shield_mo",
+      "type": "symbol",
+      "source": "protomaps",
+      "source-layer": "roads",
+      "minzoom": 8,
+      "filter": [
+        "all",
+        ["has", "shield_text"],
+        ["any",
+          ["==", ["get", "kind"], "major_road"],
+          ["==", ["get", "kind"], "highway"]
+        ],
+        ["==", ["get", "network"], "other"],
+        ["in", "MO", ["get", "ref"]],
+        [
+          "any",
+          ["==", ["slice", ["get", "shield_text"], 0, 2], "MO"],
+          ["==", ["slice", ["get", "shield_text"], 0, 5], "OldMO"]
+        ]
+      ],
+      "layout": {
+        "symbol-placement": "line",
+        "symbol-spacing": 250,
+        "icon-image": [
+          "step",
+          [
+            "length",
+            [
+              "case",
+              ["==", ["slice", ["get", "shield_text"], 0, 3], "Old"],
+              ["slice", ["get", "shield_text"], 5, 8],
+              ["slice", ["get", "shield_text"], 2, 5]
+            ]
+          ],
+          "shield_us_mo_2",
+          3,
+          "shield_us_mo_3"
+        ],
+        "icon-rotation-alignment": "viewport",
+        "icon-size": 1,
+        "text-field": [
+          "case",
+          ["==", ["slice", ["get", "shield_text"], 0, 3], "Old"],
+          ["slice", ["get", "shield_text"], 5, 8],
+          ["slice", ["get", "shield_text"], 2, 5]
+        ],
+        "text-font": ["Roadgeek 2005 Series D Regular"],
+        "text-size": 10,
+        "text-rotation-alignment": "viewport",
+        "text-offset": [-0.05, -0.15],
+        "text-max-angle": 38,
+        "icon-allow-overlap": false,
+        "text-allow-overlap": false,
+        "icon-optional": false,
+        "text-optional": false
+      },
+      "paint": {"text-color": "#000000"}
+    },
+    {
+      "id": "highway_shield_ca",
+      "type": "symbol",
+      "source": "protomaps",
+      "source-layer": "roads",
+      "minzoom": 8,
+      "filter": [
+        "all",
+        ["has", "shield_text"],
+        ["any",
+          ["==", ["get", "kind"], "major_road"],
+          ["==", ["get", "kind"], "highway"]
+        ],
+        ["==", ["get", "network"], "other"],
+        ["in", "CA", ["get", "ref"]],
+        [
+          "any",
+          ["==", ["slice", ["get", "shield_text"], 0, 2], "CA"],
+          ["==", ["slice", ["get", "shield_text"], 0, 5], "OldCA"]
+        ]
+      ],
+      "layout": {
+        "symbol-placement": "line",
+        "symbol-spacing": 250,
+        "icon-image": [
+          "step",
+          [
+            "length",
+            [
+              "case",
+              ["==", ["slice", ["get", "shield_text"], 0, 3], "Old"],
+              ["slice", ["get", "shield_text"], 5, 8],
+              ["slice", ["get", "shield_text"], 2, 5]
+            ]
+          ],
+          "shield_us_ca_2",
+          3,
+          "shield_us_ca_3"
+        ],
+        "icon-rotation-alignment": "viewport",
+        "icon-size": 1,
+        "text-field": [
+          "case",
+          ["==", ["slice", ["get", "shield_text"], 0, 3], "Old"],
+          ["slice", ["get", "shield_text"], 5, 8],
+          ["slice", ["get", "shield_text"], 2, 5]
+        ],
+        "text-font": ["Roadgeek 2005 Series D Regular"],
+        "text-size": 10,
+        "text-rotation-alignment": "viewport",
+        "text-offset": [-0.02, 0.10],
+        "text-max-angle": 38,
+        "icon-allow-overlap": false,
+        "text-allow-overlap": false,
+        "icon-optional": false,
+        "text-optional": false
+      },
+      "paint": {"text-color": "#FFFFFF"}
+    },
+    {
+      "id": "highway_shield_fl",
+      "type": "symbol",
+      "source": "protomaps",
+      "source-layer": "roads",
+      "minzoom": 8,
+      "filter": [
+        "all",
+        ["has", "shield_text"],
+        ["any",
+          ["==", ["get", "kind"], "major_road"],
+          ["==", ["get", "kind"], "highway"]
+        ],
+        ["==", ["get", "network"], "other"],
+        ["in", "FL", ["get", "ref"]],
+        [
+          "any",
+          ["==", ["slice", ["get", "shield_text"], 0, 2], "FL"],
+          ["==", ["slice", ["get", "shield_text"], 0, 5], "OldFL"]
+        ]
+      ],
+      "layout": {
+        "symbol-placement": "line",
+        "symbol-spacing": 250,
+        "icon-image": [
+          "step",
+          [
+            "length",
+            [
+              "case",
+              ["==", ["slice", ["get", "shield_text"], 0, 3], "Old"],
+              ["slice", ["get", "shield_text"], 5, 8],
+              ["slice", ["get", "shield_text"], 2, 5]
+            ]
+          ],
+          "shield_us_fl_2",
+          3,
+          "shield_us_fl_3"
+        ],
+        "icon-rotation-alignment": "viewport",
+        "icon-size": 1,
+        "text-field": [
+          "case",
+          ["==", ["slice", ["get", "shield_text"], 0, 3], "Old"],
+          ["slice", ["get", "shield_text"], 5, 8],
+          ["slice", ["get", "shield_text"], 2, 5]
+        ],
+        "text-font": ["Roadgeek 2005 Series D Regular"],
+        "text-size": 10,
+        "text-rotation-alignment": "viewport",
+        "text-offset": [-0.05, 0.10],
+        "text-max-angle": 38,
+        "icon-allow-overlap": false,
+        "text-allow-overlap": false,
+        "icon-optional": false,
+        "text-optional": false
+      },
+      "paint": {"text-color": "#000000"}
+    },
+    {
+      "id": "highway_shield_va",
+      "type": "symbol",
+      "source": "protomaps",
+      "source-layer": "roads",
+      "minzoom": 8,
+      "filter": [
+        "all",
+        ["has", "shield_text"],
+        ["any",
+          ["==", ["get", "kind"], "major_road"],
+          ["==", ["get", "kind"], "highway"]
+        ],
+        ["==", ["get", "network"], "other"],
+        ["in", "VA", ["get", "ref"]],
+        [
+          "any",
+          ["==", ["slice", ["get", "shield_text"], 0, 2], "VA"],
+          ["==", ["slice", ["get", "shield_text"], 0, 5], "OldVA"]
+        ]
+      ],
+      "layout": {
+        "symbol-placement": "line",
+        "symbol-spacing": 250,
+        "icon-image": [
+          "step",
+          [
+            "length",
+            [
+              "case",
+              ["==", ["slice", ["get", "shield_text"], 0, 3], "Old"],
+              ["slice", ["get", "shield_text"], 5, 8],
+              ["slice", ["get", "shield_text"], 2, 5]
+            ]
+          ],
+          "shield_escutcheon",
+          3,
+          "shield_escutcheon"
+        ],
+        "icon-rotation-alignment": "viewport",
+        "icon-size": 1,
+        "text-field": [
+          "case",
+          ["==", ["slice", ["get", "shield_text"], 0, 3], "Old"],
+          ["slice", ["get", "shield_text"], 5, 8],
+          ["slice", ["get", "shield_text"], 2, 5]
+        ],
+        "text-font": ["Roadgeek 2005 Series D Regular"],
+        "text-size": 10,
+        "text-rotation-alignment": "viewport",
+        "text-max-angle": 38,
+        "icon-allow-overlap": false,
+        "text-allow-overlap": false,
+        "icon-optional": false,
+        "text-optional": false
       },
       "paint": {"text-color": "#000000"}
     },
@@ -1597,16 +2080,30 @@
       "source": "protomaps",
       "source-layer": "roads",
       "minzoom": 11,
-      "filter": ["in", "kind", "highway", "major_road"],
+      "filter": [
+        "in",
+        "kind",
+        "highway",
+        "major_road"
+      ],
       "layout": {
-        "symbol-sort-key": ["get", "min_zoom"],
+        "symbol-sort-key": [
+          "get",
+          "min_zoom"
+        ],
         "symbol-placement": "line",
-        "text-font": ["Inter Display Regular"],
-        "text-field": ["coalesce", ["get", "name:en"], ["get", "name"]],
-        "text-size": 10
+        "text-font": [
+          "Inter Display Regular"
+        ],
+        "text-field": [
+          "coalesce",
+          ["get", "name:en"],
+          ["get", "name"]
+        ],
+        "text-size": 12
       },
       "paint": {
-        "text-color": "#91888b",
+        "text-color": "rgba(76, 73, 73, 1)",
         "text-halo-color": "#ffffff",
         "text-halo-width": 2,
         "text-halo-blur": 2

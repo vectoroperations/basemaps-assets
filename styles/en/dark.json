@@ -10,7 +10,7 @@
       "maxzoom": 15
     }
   },
-  "sprite": "https://map-assets.runvector.app/sprites/v5/dark",
+  "sprite": "https://map-assets.runvector.app/sprites/v6/dark",
   "glyphs": "https://map-assets.runvector.app/fonts/{fontstack}/{range}.pbf",
   "layers": [
     {
