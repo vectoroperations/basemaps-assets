@@ -3,399 +3,413 @@
     "height": 38,
     "pixelRatio": 2,
     "width": 38,
-    "x": 3626,
-    "y": 0
+    "x": 298,
+    "y": 160
   },
   "animal": {
     "height": 38,
     "pixelRatio": 2,
     "width": 38,
-    "x": 3664,
-    "y": 0
+    "x": 300,
+    "y": 120
   },
   "beach": {
     "height": 38,
     "pixelRatio": 2,
     "width": 38,
-    "x": 3702,
-    "y": 0
+    "x": 304,
+    "y": 80
   },
   "bench": {
     "height": 38,
     "pixelRatio": 2,
     "width": 38,
-    "x": 3740,
-    "y": 0
+    "x": 308,
+    "y": 40
   },
   "bus_stop": {
     "height": 38,
     "pixelRatio": 2,
     "width": 38,
-    "x": 3778,
+    "x": 310,
     "y": 0
   },
   "drinking_water": {
     "height": 38,
     "pixelRatio": 2,
     "width": 38,
-    "x": 3816,
-    "y": 0
+    "x": 298,
+    "y": 198
   },
   "ferry_terminal": {
     "height": 38,
     "pixelRatio": 2,
     "width": 38,
-    "x": 3854,
-    "y": 0
+    "x": 336,
+    "y": 158
   },
   "fishhead": {
     "height": 40,
     "pixelRatio": 2,
     "width": 40,
-    "x": 2840,
-    "y": 48
+    "x": 100,
+    "y": 132
   },
   "forest": {
     "height": 38,
     "pixelRatio": 2,
     "width": 38,
-    "x": 3892,
-    "y": 0
+    "x": 338,
+    "y": 118
   },
   "garden": {
     "height": 38,
     "pixelRatio": 2,
     "width": 38,
-    "x": 3930,
-    "y": 0
+    "x": 342,
+    "y": 78
   },
   "hexagon": {
     "height": 40,
     "pixelRatio": 2,
     "width": 48,
-    "x": 3338,
-    "y": 0
+    "x": 50,
+    "y": 200
   },
   "hexagon_horizontal": {
     "height": 40,
     "pixelRatio": 2,
     "width": 68,
-    "x": 2700,
+    "x": 0,
     "y": 40
   },
   "library": {
     "height": 38,
     "pixelRatio": 2,
     "width": 38,
-    "x": 3968,
-    "y": 0
+    "x": 346,
+    "y": 38
   },
   "marina": {
     "height": 38,
     "pixelRatio": 2,
     "width": 38,
-    "x": 4006,
+    "x": 348,
     "y": 0
   },
   "octagon": {
     "height": 40,
     "pixelRatio": 2,
     "width": 40,
-    "x": 2768,
-    "y": 52
+    "x": 138,
+    "y": 172
   },
   "park": {
     "height": 38,
     "pixelRatio": 2,
     "width": 38,
-    "x": 4044,
-    "y": 0
+    "x": 336,
+    "y": 196
   },
   "peak": {
     "height": 38,
     "pixelRatio": 2,
     "width": 38,
-    "x": 3626,
-    "y": 38
+    "x": 374,
+    "y": 156
   },
   "pentagon_down": {
     "height": 40,
     "pixelRatio": 2,
     "width": 40,
-    "x": 2700,
-    "y": 80
+    "x": 140,
+    "y": 132
   },
   "pentagon_up": {
     "height": 40,
     "pixelRatio": 2,
     "width": 40,
-    "x": 2932,
-    "y": 40
+    "x": 144,
+    "y": 92
   },
   "pill": {
     "height": 40,
     "pixelRatio": 2,
     "width": 86,
-    "x": 2700,
+    "x": 0,
     "y": 0
   },
   "school": {
     "height": 38,
     "pixelRatio": 2,
     "width": 38,
-    "x": 3426,
-    "y": 40
+    "x": 376,
+    "y": 116
   },
   "shield_badge_2": {
     "height": 40,
     "pixelRatio": 2,
     "width": 40,
-    "x": 2972,
-    "y": 40
+    "x": 138,
+    "y": 212
   },
   "shield_badge_3": {
     "height": 40,
     "pixelRatio": 2,
     "width": 50,
-    "x": 2888,
-    "y": 0
+    "x": 0,
+    "y": 128
   },
   "shield_badge_crossbar_2": {
     "height": 40,
     "pixelRatio": 2,
     "width": 40,
-    "x": 3012,
+    "x": 148,
     "y": 40
   },
   "shield_badge_crossbar_3": {
     "height": 40,
     "pixelRatio": 2,
     "width": 50,
-    "x": 2938,
-    "y": 0
+    "x": 48,
+    "y": 80
   },
   "shield_diamond": {
     "height": 48,
     "pixelRatio": 2,
     "width": 48,
-    "x": 2840,
-    "y": 0
+    "x": 0,
+    "y": 80
   },
   "shield_escutcheon": {
     "height": 40,
     "pixelRatio": 2,
     "width": 40,
-    "x": 3052,
-    "y": 40
+    "x": 178,
+    "y": 172
   },
   "shield_round": {
     "height": 40,
     "pixelRatio": 2,
     "width": 40,
-    "x": 3092,
-    "y": 40
+    "x": 180,
+    "y": 132
   },
   "shield_rounded_rectangle": {
     "height": 40,
     "pixelRatio": 2,
     "width": 40,
-    "x": 3132,
-    "y": 40
+    "x": 178,
+    "y": 212
   },
   "shield_us_ca_2": {
     "height": 40,
     "pixelRatio": 2,
     "width": 40,
-    "x": 3172,
-    "y": 40
+    "x": 184,
+    "y": 80
   },
   "shield_us_ca_3": {
     "height": 40,
     "pixelRatio": 2,
     "width": 50,
-    "x": 2988,
-    "y": 0
+    "x": 0,
+    "y": 168
   },
   "shield_us_dc": {
     "height": 44,
     "pixelRatio": 2,
     "width": 40,
-    "x": 3386,
-    "y": 0
+    "x": 98,
+    "y": 200
   },
   "shield_us_fl_2": {
     "height": 40,
     "pixelRatio": 2,
     "width": 40,
-    "x": 3212,
+    "x": 188,
     "y": 40
   },
   "shield_us_fl_3": {
     "height": 40,
     "pixelRatio": 2,
     "width": 50,
-    "x": 3038,
-    "y": 0
+    "x": 0,
+    "y": 208
   },
   "shield_us_fl_turnpike": {
     "height": 40,
     "pixelRatio": 2,
     "width": 40,
-    "x": 3252,
-    "y": 40
+    "x": 190,
+    "y": 0
   },
   "shield_us_interstate_2": {
     "height": 40,
     "pixelRatio": 2,
     "width": 40,
-    "x": 3292,
-    "y": 40
+    "x": 218,
+    "y": 172
   },
   "shield_us_interstate_3": {
     "height": 40,
     "pixelRatio": 2,
     "width": 50,
-    "x": 3088,
-    "y": 0
+    "x": 50,
+    "y": 120
   },
   "shield_us_interstate_business_2": {
     "height": 40,
     "pixelRatio": 2,
     "width": 40,
-    "x": 3332,
-    "y": 40
+    "x": 218,
+    "y": 212
   },
   "shield_us_interstate_business_3": {
     "height": 40,
     "pixelRatio": 2,
     "width": 50,
-    "x": 3138,
-    "y": 0
+    "x": 98,
+    "y": 52
   },
   "shield_us_ks_2": {
     "height": 40,
     "pixelRatio": 2,
     "width": 40,
-    "x": 3426,
-    "y": 0
+    "x": 220,
+    "y": 120
   },
   "shield_us_ks_3": {
     "height": 40,
     "pixelRatio": 2,
     "width": 50,
-    "x": 3188,
+    "x": 140,
     "y": 0
   },
   "shield_us_md_2": {
     "height": 40,
     "pixelRatio": 2,
     "width": 40,
-    "x": 3466,
-    "y": 0
+    "x": 224,
+    "y": 80
   },
   "shield_us_md_3": {
     "height": 40,
     "pixelRatio": 2,
-    "width": 50,
-    "x": 3238,
-    "y": 0
+    "width": 40,
+    "x": 228,
+    "y": 40
   },
   "shield_us_mo_2": {
     "height": 40,
     "pixelRatio": 2,
     "width": 40,
-    "x": 3506,
+    "x": 230,
     "y": 0
   },
   "shield_us_mo_3": {
     "height": 40,
     "pixelRatio": 2,
     "width": 50,
-    "x": 3288,
-    "y": 0
+    "x": 50,
+    "y": 160
+  },
+  "shield_us_nc": {
+    "height": 40,
+    "pixelRatio": 2,
+    "width": 40,
+    "x": 258,
+    "y": 160
+  },
+  "shield_us_tx": {
+    "height": 40,
+    "pixelRatio": 2,
+    "width": 40,
+    "x": 260,
+    "y": 120
   },
   "shield_us_tx_outline": {
     "height": 52,
     "pixelRatio": 2,
     "width": 54,
-    "x": 2786,
+    "x": 86,
     "y": 0
   },
   "shield_us_va_2": {
-    "height": 1200,
+    "height": 40,
     "pixelRatio": 2,
-    "width": 1200,
-    "x": 1500,
-    "y": 0
+    "width": 40,
+    "x": 264,
+    "y": 80
   },
   "shield_us_va_3": {
-    "height": 1200,
+    "height": 40,
     "pixelRatio": 2,
-    "width": 1500,
-    "x": 0,
-    "y": 0
+    "width": 40,
+    "x": 268,
+    "y": 40
   },
   "stadium": {
     "height": 38,
     "pixelRatio": 2,
     "width": 38,
-    "x": 3372,
-    "y": 44
+    "x": 380,
+    "y": 76
   },
   "toilets": {
     "height": 38,
     "pixelRatio": 2,
     "width": 38,
-    "x": 3464,
-    "y": 40
+    "x": 384,
+    "y": 38
   },
   "townspot": {
     "height": 38,
     "pixelRatio": 2,
     "width": 38,
-    "x": 3502,
-    "y": 40
+    "x": 386,
+    "y": 0
   },
   "train_station": {
     "height": 38,
     "pixelRatio": 2,
     "width": 38,
-    "x": 3540,
-    "y": 40
+    "x": 374,
+    "y": 194
   },
   "trapezoid-down": {
     "height": 40,
     "pixelRatio": 2,
     "width": 40,
-    "x": 3546,
+    "x": 270,
     "y": 0
   },
   "trapezoid-up": {
     "height": 40,
     "pixelRatio": 2,
     "width": 40,
-    "x": 3586,
-    "y": 0
+    "x": 258,
+    "y": 200
   },
   "triangle": {
     "height": 40,
     "pixelRatio": 2,
     "width": 44,
-    "x": 2888,
-    "y": 40
+    "x": 100,
+    "y": 92
   },
   "university": {
     "height": 38,
     "pixelRatio": 2,
     "width": 38,
-    "x": 3578,
-    "y": 40
+    "x": 412,
+    "y": 154
   },
   "zoo": {
     "height": 38,
     "pixelRatio": 2,
     "width": 38,
-    "x": 3664,
-    "y": 38
+    "x": 414,
+    "y": 114
   }
 }

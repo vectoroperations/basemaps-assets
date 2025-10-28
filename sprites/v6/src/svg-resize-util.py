@@ -9,7 +9,7 @@ for filename in os.listdir(directory):
         continue
     
     # Skip all shield files EXCEPT Virginia and Maryland shields
-    if filename.startswith('shield_') and not any(x in filename for x in ['shield_us_md']):
+    if filename.startswith('shield_') and not any(x in filename for x in ['shield_us_tx']):
         print(f'⊘ {filename} (skipped - keeping original dimensions)')
         continue
     
