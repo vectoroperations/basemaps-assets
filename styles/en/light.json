@@ -2347,6 +2347,65 @@
       "paint": {"text-color": "#003578"}
     },
     {
+      "id": "highway_shield_ny",
+      "type": "symbol",
+      "source": "protomaps",
+      "source-layer": "roads",
+      "minzoom": 8,
+      "filter": [
+        "all",
+        ["has", "shield_text"],
+        ["any",
+          ["==", ["get", "kind"], "major_road"],
+          ["==", ["get", "kind"], "highway"]
+        ],
+        ["==", ["get", "network"], "other"],
+        ["in", "NY", ["get", "ref"]],
+        [
+          "any",
+          ["==", ["slice", ["get", "shield_text"], 0, 2], "NY"],
+          ["==", ["slice", ["get", "shield_text"], 0, 5], "OldNY"]
+        ]
+      ],
+      "layout": {
+        "symbol-placement": "line",
+        "symbol-spacing": 250,
+        "icon-image": [
+          "step",
+          [
+            "length",
+            [
+              "case",
+              ["==", ["slice", ["get", "shield_text"], 0, 3], "Old"],
+              ["slice", ["get", "shield_text"], 5, 8],
+              ["slice", ["get", "shield_text"], 2, 5]
+            ]
+          ],
+          "shield_us_ny",
+          3,
+          "shield_us_ny"
+        ],
+        "icon-rotation-alignment": "viewport",
+        "icon-size": 1,
+        "text-field": [
+          "case",
+          ["==", ["slice", ["get", "shield_text"], 0, 3], "Old"],
+          ["slice", ["get", "shield_text"], 5, 8],
+          ["slice", ["get", "shield_text"], 2, 5]
+        ],
+        "text-font": ["Roadgeek 2005 Series D Regular"],
+        "text-size": 9,
+        "text-rotation-alignment": "viewport",
+        "text-offset": [0, 0],
+        "text-max-angle": 38,
+        "icon-allow-overlap": false,
+        "text-allow-overlap": false,
+        "icon-optional": false,
+        "text-optional": false
+      },
+      "paint": {"text-color": "#000000"}
+    },
+    {
       "id": "water_waterway_label",
       "type": "symbol",
       "source": "protomaps",

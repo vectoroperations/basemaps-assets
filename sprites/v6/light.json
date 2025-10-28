@@ -307,39 +307,46 @@
     "x": 149,
     "y": 0
   },
-  "shield_us_md_2": {
+  "shield_us_la": {
     "height": 20,
     "pixelRatio": 1,
     "width": 20,
     "x": 100,
     "y": 40
   },
-  "shield_us_md_3": {
+  "shield_us_md_2": {
     "height": 20,
     "pixelRatio": 1,
     "width": 20,
     "x": 120,
     "y": 40
   },
-  "shield_us_mi_2": {
+  "shield_us_md_3": {
     "height": 20,
     "pixelRatio": 1,
     "width": 20,
     "x": 140,
     "y": 40
   },
-  "shield_us_mi_3": {
+  "shield_us_mi_2": {
     "height": 20,
     "pixelRatio": 1,
     "width": 20,
     "x": 160,
     "y": 40
   },
-  "shield_us_mo_2": {
+  "shield_us_mi_3": {
     "height": 20,
     "pixelRatio": 1,
     "width": 20,
     "x": 180,
+    "y": 40
+  },
+  "shield_us_mo_2": {
+    "height": 20,
+    "pixelRatio": 1,
+    "width": 20,
+    "x": 200,
     "y": 40
   },
   "shield_us_mo_3": {
@@ -353,101 +360,94 @@
     "height": 20,
     "pixelRatio": 1,
     "width": 20,
-    "x": 200,
-    "y": 40
-  },
-  "shield_us_oh": {
-    "height": 20,
-    "pixelRatio": 1,
-    "width": 20,
     "x": 220,
     "y": 40
   },
-  "shield_us_ok_2": {
+  "shield_us_ny": {
     "height": 20,
     "pixelRatio": 1,
     "width": 20,
     "x": 40,
     "y": 60
   },
-  "shield_us_ok_3": {
+  "shield_us_oh": {
     "height": 20,
     "pixelRatio": 1,
     "width": 20,
     "x": 40,
     "y": 80
   },
-  "shield_us_pa_2": {
+  "shield_us_ok_2": {
     "height": 20,
     "pixelRatio": 1,
     "width": 20,
     "x": 40,
     "y": 100
   },
-  "shield_us_pa_3": {
+  "shield_us_ok_3": {
     "height": 20,
     "pixelRatio": 1,
     "width": 20,
     "x": 40,
     "y": 120
   },
-  "shield_us_pr": {
+  "shield_us_pa_2": {
     "height": 20,
     "pixelRatio": 1,
     "width": 20,
     "x": 40,
     "y": 140
   },
-  "shield_us_sc": {
+  "shield_us_pa_3": {
     "height": 20,
     "pixelRatio": 1,
     "width": 20,
     "x": 40,
     "y": 160
   },
-  "shield_us_tx": {
+  "shield_us_pr": {
     "height": 20,
     "pixelRatio": 1,
     "width": 20,
     "x": 40,
     "y": 180
   },
-  "shield_us_tx_fm": {
+  "shield_us_sc": {
     "height": 20,
     "pixelRatio": 1,
     "width": 20,
     "x": 40,
     "y": 200
   },
-  "shield_us_tx_toll": {
+  "shield_us_tx": {
     "height": 20,
     "pixelRatio": 1,
     "width": 20,
     "x": 40,
     "y": 220
   },
-  "shield_us_va_2": {
+  "shield_us_tx_fm": {
     "height": 20,
     "pixelRatio": 1,
     "width": 20,
     "x": 60,
     "y": 60
   },
-  "shield_us_va_3": {
+  "shield_us_tx_toll": {
     "height": 20,
     "pixelRatio": 1,
     "width": 20,
     "x": 80,
     "y": 60
   },
-  "shields_us_la": {
+  "shield_us_va_2": {
     "height": 20,
     "pixelRatio": 1,
     "width": 20,
     "x": 100,
     "y": 60
   },
-  "shields_us_ny": {
+  "shield_us_va_3": {
     "height": 20,
     "pixelRatio": 1,
     "width": 20,
