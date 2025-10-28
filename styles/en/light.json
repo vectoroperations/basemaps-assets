@@ -70,17 +70,21 @@
           "forest",
           "golf_course",
           "wood",
-          "nature_reserve",
-          "forest",
           "scrub",
           "grassland",
-          "grass",
-          "military",
-          "naval_base"
+          "grass"
         ]
       ],
       "paint": {
-        "fill-opacity": ["interpolate", ["linear"], ["zoom"], 6, 0, 11, 1],
+        "fill-opacity": [
+          "interpolate",
+          ["linear"],
+          ["zoom"],
+          6,
+          0,
+          11,
+          1
+        ],
         "fill-color": [
           "case",
           [
@@ -103,23 +107,81 @@
           [
             "in",
             ["get", "kind"],
-            ["literal", ["wood", "nature_reserve", "forest"]]
+            [
+              "literal",
+              [
+                "wood",
+                "nature_reserve",
+                "forest"
+              ]
+            ]
           ],
           "#a0d9a0",
-          ["in", ["get", "kind"], ["literal", ["scrub", "grassland", "grass"]]],
-          "#99d2bb",
-          ["in", ["get", "kind"], ["literal", ["glacier"]]],
-          "#e7e7e7",
-          ["in", ["get", "kind"], ["literal", ["sand"]]],
-          "#e2e0d7",
           [
             "in",
             ["get", "kind"],
-            ["literal", ["military", "naval_base", "airfield"]]
+            [
+              "literal",
+              [
+                "scrub",
+                "grassland",
+                "grass"
+              ]
+            ]
           ],
-          "#c6dcdc",
+          "#99d2bb",
+          [
+            "in",
+            ["get", "kind"],
+            ["literal", ["glacier"]]
+          ],
+          "#e7e7e7",
+          [
+            "in",
+            ["get", "kind"],
+            ["literal", ["sand"]]
+          ],
+          "#e2e0d7",
           "#e2dfda"
         ]
+      },
+      "metadata": {
+        "note": "Removed military and naval_base from this layer - they now have their own dedicated layer"
+      }
+    },
+    {
+      "id": "landuse_military",
+      "type": "fill",
+      "source": "protomaps",
+      "source-layer": "landuse",
+      "filter": [
+        "in",
+        "kind",
+        "military",
+        "naval_base",
+        "airfield"
+      ],
+      "paint": {
+        "fill-color": "rgba(192, 189, 167, 0.65)",
+        "fill-opacity": 1
+      },
+      "metadata": {
+        "note": "New layer for military land use - soft teal-grey for light mode"
+      },
+      "minzoom": 9
+    },
+    {
+      "id": "landuse_aerodrome",
+      "type": "fill",
+      "source": "protomaps",
+      "source-layer": "landuse",
+      "filter": ["in", "kind", "aerodrome"],
+      "paint": {
+        "fill-color": "#d4d5e0",
+        "fill-opacity": 1
+      },
+      "metadata": {
+        "note": "Updated with more distinct lavender-grey color for better visibility"
       }
     },
     {
@@ -171,14 +233,6 @@
       "paint": {"fill-color": "#c6dcdc"}
     },
     {
-      "id": "landuse_aerodrome",
-      "type": "fill",
-      "source": "protomaps",
-      "source-layer": "landuse",
-      "filter": ["in", "kind", "aerodrome"],
-      "paint": {"fill-color": "#dadbdf"}
-    },
-    {
       "id": "roads_runway",
       "type": "line",
       "source": "protomaps",
@@ -193,9 +247,9 @@
           10,
           0,
           12,
-          4,
+          8,
           18,
-          30
+          50
         ]
       }
     },
@@ -213,21 +267,13 @@
           ["exponential", 1.6],
           ["zoom"],
           13,
-          0,
-          13.5,
           1,
+          13.5,
+          3,
           15,
-          6
+          8
         ]
       }
-    },
-    {
-      "id": "landuse_runway",
-      "type": "fill",
-      "source": "protomaps",
-      "source-layer": "landuse",
-      "filter": ["any", ["in", "kind", "runway", "taxiway"]],
-      "paint": {"fill-color": "#e9e9ed"}
     },
     {
       "id": "water",
@@ -1573,65 +1619,6 @@
       "paint": {"text-color": "#000000"}
     },
     {
-      "id": "highway_shield_mi",
-      "type": "symbol",
-      "source": "protomaps",
-      "source-layer": "roads",
-      "minzoom": 8,
-      "filter": [
-        "all",
-        ["has", "shield_text"],
-        ["any",
-          ["==", ["get", "kind"], "major_road"],
-          ["==", ["get", "kind"], "highway"]
-        ],
-        ["==", ["get", "network"], "other"],
-        ["in", "M", ["get", "ref"]],
-        [
-          "any",
-          ["==", ["slice", ["get", "shield_text"], 0, 1], "M"],
-          ["==", ["slice", ["get", "shield_text"], 0, 4], "OldM"]
-        ]
-      ],
-      "layout": {
-        "symbol-placement": "line",
-        "symbol-spacing": 250,
-        "icon-image": [
-          "step",
-          [
-            "length",
-            [
-              "case",
-              ["==", ["slice", ["get", "shield_text"], 0, 3], "Old"],
-              ["slice", ["get", "shield_text"], 4, 7],
-              ["slice", ["get", "shield_text"], 1, 4]
-            ]
-          ],
-          "shield_us_mi_2",
-          3,
-          "shield_us_mi_3"
-        ],
-        "icon-rotation-alignment": "viewport",
-        "icon-size": 1.3,
-        "text-field": [
-          "case",
-          ["==", ["slice", ["get", "shield_text"], 0, 3], "Old"],
-          ["slice", ["get", "shield_text"], 4, 7],
-          ["slice", ["get", "shield_text"], 1, 4]
-        ],
-        "text-font": ["Roadgeek 2005 Series D Regular"],
-        "text-size": 10,
-        "text-rotation-alignment": "viewport",
-        "text-offset": [0, 0.15],
-        "text-max-angle": 38,
-        "icon-allow-overlap": false,
-        "text-allow-overlap": false,
-        "icon-optional": false,
-        "text-optional": false
-      },
-      "paint": {"text-color": "#000000"}
-    },
-    {
       "id": "highway_shield_md",
       "type": "symbol",
       "source": "protomaps",
@@ -2759,12 +2746,75 @@
       }
     },
     {
+      "id": "pois_aerodrome",
+      "type": "symbol",
+      "source": "protomaps",
+      "source-layer": "pois",
+      "filter": [
+        "all",
+        ["==", ["get", "kind"], "aerodrome"],
+        [">=", ["zoom"], 9]
+      ],
+      "layout": {
+        "icon-image": "aerodrome",
+        "icon-size": 1.0,
+        "text-font": ["Inter Display SemiBold"],
+        "text-justify": "left",
+        "text-field": [
+          "format",
+          ["upcase", ["coalesce", ["get", "iata"], ""]],
+          {"font-scale": 1.1},
+          "\n",
+          {},
+          ["coalesce", ["get", "name:en"], ["get", "name"]],
+          {"font-scale": 0.9}
+        ],
+        "text-size": [
+          "interpolate",
+          ["linear"],
+          ["zoom"],
+          9,
+          10,
+          12,
+          14,
+          17,
+          16,
+          19,
+          18
+        ],
+        "text-max-width": 12,
+        "text-anchor": "left",
+        "text-offset": [1.2, 0],
+        "text-optional": false,
+        "visibility": "visible"
+      },
+      "paint": {
+        "text-color": "#2b5fbf",
+        "text-halo-width": 2.5,
+        "text-halo-blur": 4,
+        "text-halo-color": "rgba(255, 255, 255, 0.95)",
+        "icon-opacity": [
+          "interpolate",
+          ["linear"],
+          ["zoom"],
+          9,
+          0.7,
+          12,
+          1
+        ]
+      },
+      "metadata": {
+        "note": "Dedicated aerodrome POI layer with IATA code on first line, shows from zoom 9+"
+      }
+    },
+    {
       "id": "pois",
       "type": "symbol",
       "source": "protomaps",
       "source-layer": "pois",
       "filter": [
         "all",
+        ["!=", ["get", "kind"], "aerodrome"],
         [
           "in",
           ["get", "kind"],
@@ -2779,7 +2829,6 @@
               "zoo",
               "garden",
               "bench",
-              "aerodrome",
               "station",
               "bus_stop",
               "ferry_terminal",
@@ -2793,7 +2842,11 @@
             ]
           ]
         ],
-        [">=", ["zoom"], ["+", ["get", "min_zoom"], 0]]
+        [
+          ">=",
+          ["zoom"],
+          ["+", ["get", "min_zoom"], 0]
+        ]
       ],
       "layout": {
         "icon-image": [
@@ -2803,13 +2856,30 @@
           "train_station",
           ["get", "kind"]
         ],
-        "text-font": ["Inter Display SemiBold"],
+        "text-font": [
+          "Inter Display SemiBold"
+        ],
         "text-justify": "auto",
-        "text-field": ["coalesce", ["get", "name:en"], ["get", "name"]],
-        "text-size": ["interpolate", ["linear"], ["zoom"], 17, 10, 19, 16],
+        "text-field": [
+          "coalesce",
+          ["get", "name:en"],
+          ["get", "name"]
+        ],
+        "text-size": [
+          "interpolate",
+          ["linear"],
+          ["zoom"],
+          17,
+          10,
+          19,
+          16
+        ],
         "text-max-width": 8,
         "text-offset": [1.1, 0],
-        "text-variable-anchor": ["left", "right"],
+        "text-variable-anchor": [
+          "left",
+          "right"
+        ],
         "visibility": "visible"
       },
       "paint": {
@@ -2836,7 +2906,14 @@
           [
             "in",
             ["get", "kind"],
-            ["literal", ["aerodrome", "station", "bus_stop", "ferry_terminal"]]
+            [
+              "literal",
+              [
+                "station",
+                "bus_stop",
+                "ferry_terminal"
+              ]
+            ]
           ],
           "#315BCF",
           [
@@ -2861,6 +2938,9 @@
         "text-halo-width": 2,
         "text-halo-blur": 4,
         "text-halo-color": "rgba(250, 250, 250, 0.99)"
+      },
+      "metadata": {
+        "note": "Removed aerodrome from this layer - it now has its own dedicated layer"
       }
     },
     {

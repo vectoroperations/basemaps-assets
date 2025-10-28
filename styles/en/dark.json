@@ -70,17 +70,21 @@
           "forest",
           "golf_course",
           "wood",
-          "nature_reserve",
-          "forest",
           "scrub",
           "grassland",
-          "grass",
-          "military",
-          "naval_base"
+          "grass"
         ]
       ],
       "paint": {
-        "fill-opacity": ["interpolate", ["linear"], ["zoom"], 6, 0, 11, 1],
+        "fill-opacity": [
+          "interpolate",
+          ["linear"],
+          ["zoom"],
+          6,
+          0,
+          11,
+          1
+        ],
         "fill-color": [
           "case",
           [
@@ -103,23 +107,87 @@
           [
             "in",
             ["get", "kind"],
-            ["literal", ["wood", "nature_reserve", "forest"]]
+            [
+              "literal",
+              [
+                "wood",
+                "nature_reserve",
+                "forest"
+              ]
+            ]
           ],
           "#202121",
-          ["in", ["get", "kind"], ["literal", ["scrub", "grassland", "grass"]]],
-          "#222323",
-          ["in", ["get", "kind"], ["literal", ["glacier"]]],
-          "#1c1c1c",
-          ["in", ["get", "kind"], ["literal", ["sand"]]],
-          "#212123",
           [
             "in",
             ["get", "kind"],
-            ["literal", ["military", "naval_base", "airfield"]]
+            [
+              "literal",
+              [
+                "scrub",
+                "grassland",
+                "grass"
+              ]
+            ]
           ],
           "#222323",
+          [
+            "in",
+            ["get", "kind"],
+            ["literal", ["glacier"]]
+          ],
+          "#1c1c1c",
+          [
+            "in",
+            ["get", "kind"],
+            ["literal", ["sand"]]
+          ],
+          "#212123",
           "#1f1f1f"
         ]
+      },
+      "metadata": {
+        "note": "Removed military and naval_base from this layer - they now have their own dedicated layer"
+      }
+    },
+    {
+      "id": "landuse_military",
+      "type": "fill",
+      "source": "protomaps",
+      "source-layer": "landuse",
+      "filter": [
+        "in",
+        "kind",
+        "military",
+        "naval_base",
+        "airfield"
+      ],
+      "paint": {
+        "fill-color": "rgba(62, 59, 43, 0.88)",
+        "fill-opacity": 1
+      },
+      "metadata": {
+        "note": "New layer for military land use - displays at all zoom levels with high contrast teal-grey"
+      },
+      "minzoom": 9
+    },
+    {
+      "id": "landuse_aerodrome",
+      "type": "fill",
+      "source": "protomaps",
+      "source-layer": "landuse",
+      "filter": [
+        "in",
+        "kind",
+        "aerodrome",
+        "runway",
+        "taxiway"
+      ],
+      "paint": {
+        "fill-color": "#42424f",
+        "fill-opacity": 1
+      },
+      "metadata": {
+        "note": "Purple-grey fill for ALL aerodrome areas including runways/taxiways - this replaces the old landuse_runway layer"
       }
     },
     {
@@ -171,71 +239,18 @@
       "paint": {"fill-color": "#222323"}
     },
     {
-      "id": "landuse_aerodrome",
-      "type": "fill",
-      "source": "protomaps",
-      "source-layer": "landuse",
-      "filter": ["in", "kind", "aerodrome"],
-      "paint": {"fill-color": "#32323f"}
-    },
-    {
-      "id": "roads_runway",
-      "type": "line",
-      "source": "protomaps",
-      "source-layer": "roads",
-      "filter": ["==", "kind_detail", "runway"],
-      "paint": {
-        "line-color": "#333333",
-        "line-width": [
-          "interpolate",
-          ["exponential", 1.6],
-          ["zoom"],
-          10,
-          0,
-          12,
-          4,
-          18,
-          30
-        ]
-      }
-    },
-    {
-      "id": "roads_taxiway",
-      "type": "line",
-      "source": "protomaps",
-      "source-layer": "roads",
-      "minzoom": 13,
-      "filter": ["==", "kind_detail", "taxiway"],
-      "paint": {
-        "line-color": "#333333",
-        "line-width": [
-          "interpolate",
-          ["exponential", 1.6],
-          ["zoom"],
-          13,
-          0,
-          13.5,
-          1,
-          15,
-          6
-        ]
-      }
-    },
-    {
-      "id": "landuse_runway",
-      "type": "fill",
-      "source": "protomaps",
-      "source-layer": "landuse",
-      "filter": ["any", ["in", "kind", "runway", "taxiway"]],
-      "paint": {"fill-color": "#333333"}
-    },
-    {
       "id": "water",
       "type": "fill",
       "source": "protomaps",
       "source-layer": "water",
-      "filter": ["==", ["geometry-type"], "Polygon"],
-      "paint": {"fill-color": "rgba(59, 65, 77, 1)"}
+      "filter": [
+        "==",
+        ["geometry-type"],
+        "Polygon"
+      ],
+      "paint": {
+        "fill-color": "rgba(60, 79, 90, 1)"
+      }
     },
     {
       "id": "water_stream",
@@ -300,6 +315,57 @@
           0,
           20,
           7
+        ]
+      }
+    },
+    {
+      "id": "roads_taxiway",
+      "type": "line",
+      "source": "protomaps",
+      "source-layer": "roads",
+      "minzoom": 13,
+      "filter": [
+        "==",
+        "kind_detail",
+        "taxiway"
+      ],
+      "paint": {
+        "line-color": "#5a5a6a",
+        "line-width": [
+          "interpolate",
+          ["exponential", 1.6],
+          ["zoom"],
+          13,
+          1,
+          13.5,
+          3,
+          15,
+          8
+        ]
+      }
+    },
+    {
+      "id": "roads_runway",
+      "type": "line",
+      "source": "protomaps",
+      "source-layer": "roads",
+      "filter": [
+        "==",
+        "kind_detail",
+        "runway"
+      ],
+      "paint": {
+        "line-color": "rgba(98, 98, 113, 1)",
+        "line-width": [
+          "interpolate",
+          ["exponential", 1.6],
+          ["zoom"],
+          10,
+          0,
+          12,
+          8,
+          18,
+          50
         ]
       }
     },
@@ -1569,65 +1635,6 @@
         "text-size": 10,
         "text-rotation-alignment": "viewport",
         "text-max-angle": 38
-      },
-      "paint": {"text-color": "#000000"}
-    },
-    {
-      "id": "highway_shield_mi",
-      "type": "symbol",
-      "source": "protomaps",
-      "source-layer": "roads",
-      "minzoom": 8,
-      "filter": [
-        "all",
-        ["has", "shield_text"],
-        ["any",
-          ["==", ["get", "kind"], "major_road"],
-          ["==", ["get", "kind"], "highway"]
-        ],
-        ["==", ["get", "network"], "other"],
-        ["in", "M", ["get", "ref"]],
-        [
-          "any",
-          ["==", ["slice", ["get", "shield_text"], 0, 1], "M"],
-          ["==", ["slice", ["get", "shield_text"], 0, 4], "OldM"]
-        ]
-      ],
-      "layout": {
-        "symbol-placement": "line",
-        "symbol-spacing": 250,
-        "icon-image": [
-          "step",
-          [
-            "length",
-            [
-              "case",
-              ["==", ["slice", ["get", "shield_text"], 0, 3], "Old"],
-              ["slice", ["get", "shield_text"], 4, 7],
-              ["slice", ["get", "shield_text"], 1, 4]
-            ]
-          ],
-          "shield_us_mi_2",
-          3,
-          "shield_us_mi_3"
-        ],
-        "icon-rotation-alignment": "viewport",
-        "icon-size": 1.3,
-        "text-field": [
-          "case",
-          ["==", ["slice", ["get", "shield_text"], 0, 3], "Old"],
-          ["slice", ["get", "shield_text"], 4, 7],
-          ["slice", ["get", "shield_text"], 1, 4]
-        ],
-        "text-font": ["Roadgeek 2005 Series D Regular"],
-        "text-size": 10,
-        "text-rotation-alignment": "viewport",
-        "text-offset": [0, 0.15],
-        "text-max-angle": 38,
-        "icon-allow-overlap": false,
-        "text-allow-overlap": false,
-        "icon-optional": false,
-        "text-optional": false
       },
       "paint": {"text-color": "#000000"}
     },
@@ -3877,12 +3884,154 @@
       "paint": {"text-color": "#8a92a0"}
     },
     {
+      "id": "pois_aerodrome",
+      "type": "symbol",
+      "source": "protomaps",
+      "source-layer": "pois",
+      "filter": [
+        "all",
+        [
+          "==",
+          [
+            "get",
+            "kind"
+          ],
+          "aerodrome"
+        ],
+        [
+          ">=",
+          [
+            "zoom"
+          ],
+          10
+        ]
+      ],
+      "layout": {
+        "icon-image": "aerodrome",
+        "icon-size": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          10,
+          0.8,
+          12,
+          1,
+          15,
+          1.2
+        ],
+        "text-font": [
+          "Inter Display SemiBold"
+        ],
+        "text-justify": "left",
+        "text-field": [
+          "format",
+          [
+            "upcase",
+            [
+              "coalesce",
+              [
+                "get",
+                "iata"
+              ],
+              ""
+            ]
+          ],
+          {
+            "font-scale": 1.1
+          },
+          "\n",
+          {},
+          [
+            "coalesce",
+            [
+              "get",
+              "name:en"
+            ],
+            [
+              "get",
+              "name"
+            ]
+          ],
+          {
+            "font-scale": 0.9
+          }
+        ],
+        "text-size": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          10,
+          9,
+          12,
+          13,
+          15,
+          15,
+          17,
+          16,
+          19,
+          18
+        ],
+        "text-max-width": 12,
+        "text-anchor": "left",
+        "text-offset": [
+          1.2,
+          0
+        ],
+        "text-optional": false,
+        "visibility": "visible"
+      },
+      "paint": {
+        "text-color": "#7ba3ff",
+        "text-halo-width": 2,
+        "text-halo-blur": 3,
+        "text-halo-color": "rgba(20, 20, 25, 0.95)",
+        "icon-opacity": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          10,
+          0.6,
+          12,
+          1
+        ],
+        "text-opacity": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          10,
+          0.7,
+          11,
+          1
+        ]
+      },
+      "metadata": {
+        "note": "Now shows from zoom 10 with smaller text/icons at lower zoom levels. If source data has min_zoom attributes blocking this, they are now ignored."
+      }
+    },
+    {
       "id": "pois",
       "type": "symbol",
       "source": "protomaps",
       "source-layer": "pois",
       "filter": [
         "all",
+        ["!=", ["get", "kind"], "aerodrome"],
         [
           "in",
           ["get", "kind"],
@@ -3896,7 +4045,6 @@
               "peak",
               "zoo",
               "garden",
-              "aerodrome",
               "bench",
               "station",
               "bus_stop",
@@ -3911,7 +4059,11 @@
             ]
           ]
         ],
-        [">=", ["zoom"], ["+", ["get", "min_zoom"], 0]]
+        [
+          ">=",
+          ["zoom"],
+          ["+", ["get", "min_zoom"], 0]
+        ]
       ],
       "layout": {
         "icon-image": [
@@ -3921,296 +4073,30 @@
           "train_station",
           ["get", "kind"]
         ],
-        "text-font": ["Inter Display SemiBold"],
+        "text-font": [
+          "Inter Display SemiBold"
+        ],
         "text-justify": "auto",
         "text-field": [
-          "case",
-          [
-            "all",
-            ["any", ["has", "name"], ["has", "pgf:name"]],
-            ["!", ["any", ["has", "name2"], ["has", "pgf:name2"]]],
-            ["!", ["any", ["has", "name3"], ["has", "pgf:name3"]]]
-          ],
-          [
-            "case",
-            ["has", "script"],
-            [
-              "case",
-              [
-                "any",
-                ["is-supported-script", ["get", "name"]],
-                ["has", "pgf:name"]
-              ],
-              [
-                "format",
-                ["coalesce", ["get", "name:en"], ["get", "name:en"]],
-                {},
-                "\n",
-                {},
-                [
-                  "case",
-                  [
-                    "all",
-                    ["!", ["has", "name:en"]],
-                    ["has", "name:en"],
-                    ["!", ["has", "script"]]
-                  ],
-                  "",
-                  ["coalesce", ["get", "pgf:name"], ["get", "name"]]
-                ],
-                {
-                  "text-font": [
-                    "case",
-                    ["==", ["get", "script"], "Devanagari"],
-                    ["literal", ["Noto Sans Devanagari Regular v1"]],
-                    ["literal", ["Inter Display Regular"]]
-                  ]
-                }
-              ],
-              ["get", "name:en"]
-            ],
-            [
-              "format",
-              [
-                "coalesce",
-                ["get", "name:en"],
-                ["get", "pgf:name"],
-                ["get", "name"]
-              ],
-              {}
-            ]
-          ],
-          [
-            "all",
-            ["any", ["has", "name"], ["has", "pgf:name"]],
-            ["any", ["has", "name2"], ["has", "pgf:name2"]],
-            ["!", ["any", ["has", "name3"], ["has", "pgf:name3"]]]
-          ],
-          [
-            "case",
-            ["all", ["has", "script"], ["has", "script2"]],
-            [
-              "format",
-              ["get", "name:en"],
-              {},
-              "\n",
-              {},
-              ["coalesce", ["get", "pgf:name"], ["get", "name"]],
-              {
-                "text-font": [
-                  "case",
-                  ["==", ["get", "script"], "Devanagari"],
-                  ["literal", ["Noto Sans Devanagari Regular v1"]],
-                  ["literal", ["Inter Display Regular"]]
-                ]
-              },
-              "\n",
-              {},
-              ["coalesce", ["get", "pgf:name2"], ["get", "name2"]],
-              {
-                "text-font": [
-                  "case",
-                  ["==", ["get", "script2"], "Devanagari"],
-                  ["literal", ["Noto Sans Devanagari Regular v1"]],
-                  ["literal", ["Inter Display Regular"]]
-                ]
-              }
-            ],
-            [
-              "case",
-              ["has", "script2"],
-              [
-                "format",
-                [
-                  "coalesce",
-                  ["get", "name:en"],
-                  ["get", "pgf:name"],
-                  ["get", "name"]
-                ],
-                {},
-                "\n",
-                {},
-                ["coalesce", ["get", "pgf:name2"], ["get", "name2"]],
-                {
-                  "text-font": [
-                    "case",
-                    ["==", ["get", "script2"], "Devanagari"],
-                    ["literal", ["Noto Sans Devanagari Regular v1"]],
-                    ["literal", ["Inter Display Regular"]]
-                  ]
-                }
-              ],
-              [
-                "format",
-                [
-                  "coalesce",
-                  ["get", "name:en"],
-                  ["get", "pgf:name2"],
-                  ["get", "name2"]
-                ],
-                {},
-                "\n",
-                {},
-                ["coalesce", ["get", "pgf:name"], ["get", "name"]],
-                {
-                  "text-font": [
-                    "case",
-                    ["==", ["get", "script"], "Devanagari"],
-                    ["literal", ["Noto Sans Devanagari Regular v1"]],
-                    ["literal", ["Inter Display Regular"]]
-                  ]
-                }
-              ]
-            ]
-          ],
-          [
-            "case",
-            ["all", ["has", "script"], ["has", "script2"], ["has", "script3"]],
-            [
-              "format",
-              ["get", "name:en"],
-              {},
-              "\n",
-              {},
-              ["coalesce", ["get", "pgf:name"], ["get", "name"]],
-              {
-                "text-font": [
-                  "case",
-                  ["==", ["get", "script"], "Devanagari"],
-                  ["literal", ["Noto Sans Devanagari Regular v1"]],
-                  ["literal", ["Inter Display Regular"]]
-                ]
-              },
-              "\n",
-              {},
-              ["coalesce", ["get", "pgf:name2"], ["get", "name2"]],
-              {
-                "text-font": [
-                  "case",
-                  ["==", ["get", "script2"], "Devanagari"],
-                  ["literal", ["Noto Sans Devanagari Regular v1"]],
-                  ["literal", ["Inter Display Regular"]]
-                ]
-              },
-              "\n",
-              {},
-              ["coalesce", ["get", "pgf:name3"], ["get", "name3"]],
-              {
-                "text-font": [
-                  "case",
-                  ["==", ["get", "script3"], "Devanagari"],
-                  ["literal", ["Noto Sans Devanagari Regular v1"]],
-                  ["literal", ["Inter Display Regular"]]
-                ]
-              }
-            ],
-            [
-              "case",
-              ["!", ["has", "script"]],
-              [
-                "format",
-                [
-                  "coalesce",
-                  ["get", "name:en"],
-                  ["get", "pgf:name"],
-                  ["get", "name"]
-                ],
-                {},
-                "\n",
-                {},
-                ["coalesce", ["get", "pgf:name2"], ["get", "name2"]],
-                {
-                  "text-font": [
-                    "case",
-                    ["==", ["get", "script2"], "Devanagari"],
-                    ["literal", ["Noto Sans Devanagari Regular v1"]],
-                    ["literal", ["Inter Display Regular"]]
-                  ]
-                },
-                "\n",
-                {},
-                ["coalesce", ["get", "pgf:name3"], ["get", "name3"]],
-                {
-                  "text-font": [
-                    "case",
-                    ["==", ["get", "script3"], "Devanagari"],
-                    ["literal", ["Noto Sans Devanagari Regular v1"]],
-                    ["literal", ["Inter Display Regular"]]
-                  ]
-                }
-              ],
-              ["!", ["has", "script2"]],
-              [
-                "format",
-                [
-                  "coalesce",
-                  ["get", "name:en"],
-                  ["get", "pgf:name2"],
-                  ["get", "name2"]
-                ],
-                {},
-                "\n",
-                {},
-                ["coalesce", ["get", "pgf:name"], ["get", "name"]],
-                {
-                  "text-font": [
-                    "case",
-                    ["==", ["get", "script"], "Devanagari"],
-                    ["literal", ["Noto Sans Devanagari Regular v1"]],
-                    ["literal", ["Inter Display Regular"]]
-                  ]
-                },
-                "\n",
-                {},
-                ["coalesce", ["get", "pgf:name3"], ["get", "name3"]],
-                {
-                  "text-font": [
-                    "case",
-                    ["==", ["get", "script3"], "Devanagari"],
-                    ["literal", ["Noto Sans Devanagari Regular v1"]],
-                    ["literal", ["Inter Display Regular"]]
-                  ]
-                }
-              ],
-              [
-                "format",
-                [
-                  "coalesce",
-                  ["get", "name:en"],
-                  ["get", "pgf:name3"],
-                  ["get", "name3"]
-                ],
-                {},
-                "\n",
-                {},
-                ["coalesce", ["get", "pgf:name"], ["get", "name"]],
-                {
-                  "text-font": [
-                    "case",
-                    ["==", ["get", "script"], "Devanagari"],
-                    ["literal", ["Noto Sans Devanagari Regular v1"]],
-                    ["literal", ["Inter Display Regular"]]
-                  ]
-                },
-                "\n",
-                {},
-                ["coalesce", ["get", "pgf:name2"], ["get", "name2"]],
-                {
-                  "text-font": [
-                    "case",
-                    ["==", ["get", "script2"], "Devanagari"],
-                    ["literal", ["Noto Sans Devanagari Regular v1"]],
-                    ["literal", ["Inter Display Regular"]]
-                  ]
-                }
-              ]
-            ]
-          ]
+          "coalesce",
+          ["get", "name:en"],
+          ["get", "name"]
         ],
-        "text-size": ["interpolate", ["linear"], ["zoom"], 17, 10, 19, 16],
+        "text-size": [
+          "interpolate",
+          ["linear"],
+          ["zoom"],
+          17,
+          10,
+          19,
+          16
+        ],
         "text-max-width": 8,
         "text-offset": [1.1, 0],
-        "text-variable-anchor": ["left", "right"],
+        "text-variable-anchor": [
+          "left",
+          "right"
+        ],
         "visibility": "visible"
       },
       "paint": {
@@ -4237,9 +4123,16 @@
           [
             "in",
             ["get", "kind"],
-            ["literal", ["station", "aerodrome", "bus_stop", "ferry_terminal"]]
+            [
+              "literal",
+              [
+                "station",
+                "bus_stop",
+                "ferry_terminal"
+              ]
+            ]
           ],
-          "#25A6EA",
+          "#315BCF",
           [
             "in",
             ["get", "kind"],
@@ -4262,6 +4155,9 @@
         "text-halo-width": 2,
         "text-halo-blur": 4,
         "text-halo-color": "rgba(39, 39, 39, 0.99)"
+      },
+      "metadata": {
+        "note": "Removed aerodrome from this layer - it now has its own dedicated layer"
       }
     },
     {
