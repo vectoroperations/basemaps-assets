@@ -3253,17 +3253,17 @@
       "type": "symbol",
       "source": "protomaps",
       "source-layer": "roads",
-      "minzoom": 11,
+      "minzoom": 10,
       "filter": ["in", "kind", "highway", "major_road"],
       "layout": {
         "symbol-sort-key": ["get", "min_zoom"],
         "symbol-placement": "line",
         "text-font": ["Inter Display Regular"],
         "text-field": ["coalesce", ["get", "name:en"], ["get", "name"]],
-        "text-size": 10
+        "text-size": 12
       },
       "paint": {
-        "text-color": "#91888b",
+        "text-color": "#D0CDCE",
         "text-halo-color": "#1f1f1f",
         "text-halo-width": 2,
         "text-halo-blur": 2
