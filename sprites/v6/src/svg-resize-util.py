@@ -2,16 +2,14 @@
 import os
 import re
 
-directory = './light'
+directory = './new_v2'
 
 for filename in os.listdir(directory):
     if not filename.endswith('.svg'):
         continue
     
     # Skip all shield files EXCEPT Virginia and Maryland shields
-    if filename.startswith('shield_') and not any(x in filename for x in ['shield_us_tx_toll', 'shield_us_sc', 'shield_us_pr', 'shield_us_il_3', 'shield_us_il_2', 'shield_us_dc', 'shield_us_co', 'shield_us_ca_3', 'shield_us_ca_2']):
-        print(f'⊘ {filename} (skipped - keeping original dimensions)')
-        continue
+    
     
     filepath = os.path.join(directory, filename)
     
