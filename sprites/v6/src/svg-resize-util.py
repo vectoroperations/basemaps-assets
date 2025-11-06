@@ -2,7 +2,7 @@
 import os
 import re
 
-directory = './new_v2'
+directory = './new_pr'
 
 for filename in os.listdir(directory):
     if not filename.endswith('.svg'):
