@@ -463,7 +463,6 @@
       ],
       "paint": {
         "line-color": "#e0e0e0",
-        "line-dasharray": [6, 0.5],
         "line-gap-width": [
           "interpolate",
           ["exponential", 1.6],
@@ -610,7 +609,7 @@
       "type": "fill",
       "source": "protomaps",
       "source-layer": "buildings",
-      "paint": {"fill-color": "#cccccc", "fill-opacity": 0.5}
+      "paint": {"fill-color": "#bcbcbc", "fill-opacity": 0.5}
     },
     {
       "id": "roads_pier",
@@ -853,9 +852,9 @@
           ["exponential", 1.6],
           ["zoom"],
           13,
-          0,
-          13.5,
-          1,
+          2,
+          15,
+          4,
           18,
           11
         ]
@@ -1113,8 +1112,8 @@
       "filter": ["==", "kind", "rail"],
       "paint": {
         "line-dasharray": [0.3, 0.75],
-        "line-opacity": 0.5,
-        "line-color": "#a7b1b3",
+        "line-opacity": 0.7,
+        "line-color": "rgba(48, 53, 53, 1)",
         "line-width": [
           "interpolate",
           ["exponential", 1.6],
@@ -1326,9 +1325,9 @@
           ["exponential", 1.6],
           ["zoom"],
           13,
-          0,
-          13.5,
-          1,
+          2,
+          15,
+          4,
           18,
           11
         ]

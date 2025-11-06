@@ -483,7 +483,6 @@
       ],
       "paint": {
         "line-color": "rgba(255, 255, 255, 0.55)",
-        "line-dasharray": [6, 0.5],
         "line-gap-width": [
           "interpolate",
           ["exponential", 1.6],
@@ -630,7 +629,10 @@
       "type": "fill",
       "source": "protomaps",
       "source-layer": "buildings",
-      "paint": {"fill-color": "#111111", "fill-opacity": 0.5}
+      "paint": {
+        "fill-color": "rgba(78, 78, 78, 1)",
+        "fill-opacity": 0.5
+      }
     },
     {
       "id": "roads_pier",
@@ -867,15 +869,15 @@
       "source-layer": "roads",
       "filter": ["has", "is_link"],
       "paint": {
-        "line-color": "#4a4a4a",
+        "line-color": "#6d6d6d",
         "line-width": [
           "interpolate",
           ["exponential", 1.6],
           ["zoom"],
           13,
-          0,
-          13.5,
-          1,
+          2,
+          15,
+          4,
           18,
           11
         ]
@@ -1133,8 +1135,8 @@
       "filter": ["==", "kind", "rail"],
       "paint": {
         "line-dasharray": [0.3, 0.75],
-        "line-opacity": 0.5,
-        "line-color": "rgba(113, 113, 113, 1)",
+        "line-opacity": 0.7,
+        "line-color": "rgba(231, 229, 229, 1)",
         "line-width": [
           "interpolate",
           ["exponential", 1.6],
@@ -1340,15 +1342,15 @@
       "minzoom": 12,
       "filter": ["all", ["has", "is_bridge"], ["has", "is_link"]],
       "paint": {
-        "line-color": "#333333",
+        "line-color": "#6d6d6d",
         "line-width": [
           "interpolate",
           ["exponential", 1.6],
           ["zoom"],
           13,
-          0,
-          13.5,
-          1,
+          2,
+          15,
+          4,
           18,
           11
         ]
@@ -4132,7 +4134,7 @@
               ]
             ]
           ],
-          "#315BCF",
+          "#CCCCCC",
           [
             "in",
             ["get", "kind"],
